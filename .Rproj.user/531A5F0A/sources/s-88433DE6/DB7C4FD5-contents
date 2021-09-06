@@ -3,7 +3,9 @@ knit: "bookdown::render_book"
 title: "Applied Data Science I"
 author: "Kyle Scot Shank"
 date: "`r Sys.Date()`"
-cover-image: cover.png
+url: 'https://ads-coa.netlify.app/'
+github-repo: kylescotshank/applied_data_science 
+twitter-handle: kylescotshank
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
@@ -23,7 +25,7 @@ description: "This is the syllabus, reading list, and course information for the
 
 ![A data visualization from Redditor `andrew_elliott`](images/cover.png){.cover width="550"}
 
-</center> 
+</center>
 
 This is the website for the **"Applied Data Science I"** course series at College of the Atlantic. It will be part book, part course page, and part collaborative learning effort between student and faculty contributors. The focus of this document will be to teach practical and applied skills in "data science" using the [R programming language](https://www.r-project.org/). No formal knowledge of computer science or R programming is required and the mathematical pre-requisites will be minimal. You'll learn how to explore and visualize data from both a practical and theoretical perspective, with a special focus on the real-world implications and ethical considerations often ignored when teaching introductory data science skills and techniques. We will focus on learning a lot and having fun while doing it. 
 
