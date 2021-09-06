@@ -1,0 +1,23 @@
+# Gettting Started
+
+## Readings for This Module {-} 
+
+* Grolemund and Wickham, [R for Data Science - Chapter 4, Workflow Basics](https://r4ds.had.co.nz/workflow-basics.html)
+
+## Important Links {-}
+
+* [R: The R Project for Statistical Computing](https://www.r-project.org/)
+* [The Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/)
+* [R Studio](https://www.rstudio.com/products/rstudio/) 
+
+## What is R? {-}
+
+## Getting and Installing R [-]
+
+R is open source, meaning anyone can download the source code and use or modify so long as they abide by the edicts of the Open Source license used by the authors. You'll need to install R for this course and in order to use R Studio as an [integrated development environment](https://en.wikipedia.org/wiki/Integrated_development_environment).
+
+In order to install R you need to download the appropriate installer from the Comprehensive R Archive Network ([CRAN](http://cran.r-project.org)). We are going to use the "base distribution" as this contains everything you need to use R under normal circumstances. There is a single [installer](http://cran.r-project.org/bin/windows/base/) for Windows. On a Mac, it's important to match the [installer](http://cran.r-project.org/bin/macosx/) to the version of OS X. In either case, R uses a standard install mechanism that should be familiar to anyone who has installed an application on their machine. There is no need to change the default settings---doing so will probably lead to problems later on.
+
+```{block, type="action"}
+Go ahead and install R on your own computer now. You won't be able to make much use of this book without it.
+```
