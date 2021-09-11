@@ -1,3 +1,2 @@
 introductions
 gettting-started
-getting-and-installing-r--
