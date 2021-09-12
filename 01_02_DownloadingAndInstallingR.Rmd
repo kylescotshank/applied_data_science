@@ -4,19 +4,23 @@
 
 * Getting R and RStudio installed and functioning for everybody 
 * Discussing why we're using R vs. other programming languages (like Python)
-* Discussing what data science "is" and "isn't" 
+* Some example analyses 
 
 ## Readings for Today {-} 
 
 ### Required {-}
 
 * Matsui and Peng, [Art of Data Science - Chapter 2, Epicycles of Analysis](https://bookdown.org/rdpeng/artofdatascience/epicycles-of-analysis.html)
-* Knuth, Donald E., [Computer programming as an art](https://dl.acm.org/doi/pdf/10.1145/1283920.1283929), *ACM Turing award lectures*. 2007.
 * Hugo Bowne-Anderson, [What Data Scientists Really Do, According to 35 Data Scientists](https://hbr.org/2018/08/what-data-scientists-really-do-according-to-35-data-scientists), *Harvard Business Review*. 15 Aug. 2018
+* Ziemann et al., [Gene name errors are widespread in the
+scientific literature](https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-016-1044-7.pdf), *Genome Biology* (2016) 17:177
+DOI 10.1186/s13059-016-1044-7 
 
 ### Optional {-}
 
-## Important Links {-}
+* Knuth, Donald E., [Computer programming as an art](https://dl.acm.org/doi/pdf/10.1145/1283920.1283929), *ACM Turing award lectures*. 2007.
+
+## Important Links and Files {-}
 
 * [R: The R Project for Statistical Computing](https://www.r-project.org/)
 * [The Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/)

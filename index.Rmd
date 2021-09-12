@@ -118,10 +118,12 @@ You're already looking at it!
 
 In all seriousness - one of the meta-goals of the Applied Data Science course series is to generate a textbook to meet the diverse needs of individuals interesting in using data science skills but who not have had exposure to the standardized math and computer science skills presupposed in introductory data science courses. 
 
-There are several supplementary texts that are not required, but may be of benefit to those who want to pursue extra study and/or have physical materials readily available to them to consult: 
+We will be using the following texts. Please note that **all** of these texts are available online for free and purchase is only necessary if you'd like to have your own physical copy for reference. 
 
-* Grolemund and Wickham's **[R For Data Science](https://www.amazon.com/R-Data-Science-Hadley-Wickham/dp/1491910399/ref=as_li_ss_tl?ie=UTF8&qid=1469550189&sr=8-1&keywords=R+for+data+science&linkCode=sl1&tag=devtools-20&linkId=6fe0069f9605cf847ed96c191f4e84dd)** is a fantastic text that will go much deeper on certain topics than we'll cover in this course. You can purchase a copy for yourself from Amazon or other booksellers - it's generally around $25. Also note that the authors offer an [online version of this book](https://r4ds.had.co.nz/) for free use.
-* Peng and Matsui's **[The Art of Data Science](https://www.amazon.com/Art-Data-Science-Roger-Peng/dp/1365061469/ref=sr_1_1?dchild=1&keywords=the+art+of+data+science&qid=1623077320&sr=8-1)**. This is much more of a holistic, conceptual text on what it means to "do" data science and could be useful contextual reading for certain approaches taken within this text. You can purchase a copy for yourself from Amazon or other booksellers - it's generally around $20. Note again that the authors offer an [online version of this book](https://bookdown.org/rdpeng/artofdatascience/epicycles-of-analysis.html) for free use (see a trend here?).
+* Grolemund and Wickham -  **[R For Data Science](https://r4ds.had.co.nz/)**
+* Peng and Matsui - **[The Art of Data Science](https://bookdown.org/rdpeng/artofdatascience/epicycles-of-analysis.html)**.
+* Barr, Ceinkaya-Rundel, Diez, and OpenIntro - **[OpenIntro Statistics](https://www.openintro.org/book/os/)** 
+  * Note: you'll need to download this from [Leanpub](https://leanpub.com/os). You can set the pay scale to $0 to purchase this PDF for free - but you'll need to provide an e-mail. 
 
 ## Hardcopy Syllabus {-}
 
