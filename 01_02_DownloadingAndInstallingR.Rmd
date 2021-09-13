@@ -10,18 +10,24 @@
 
 ### Required {-}
 
-* Matsui and Peng, [Art of Data Science - Chapter 2, Epicycles of Analysis](https://bookdown.org/rdpeng/artofdatascience/epicycles-of-analysis.html)
-* Hugo Bowne-Anderson, [What Data Scientists Really Do, According to 35 Data Scientists](https://hbr.org/2018/08/what-data-scientists-really-do-according-to-35-data-scientists), *Harvard Business Review*. 15 Aug. 2018
+* Peng, [R Programming for Data Science - Chapter 2, History and Overview of R](https://bookdown.org/rdpeng/rprogdatascience/history-and-overview-of-r.html) 
+* OpenIntro to Statistics, Sections 1.1 and 1.2
 * Ziemann et al., [Gene name errors are widespread in the
 scientific literature](https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-016-1044-7.pdf), *Genome Biology* (2016) 17:177
 DOI 10.1186/s13059-016-1044-7 
+* Alex Hern, [Covid: how Excel may have caused loss of 16,000 test results in England](https://www.theguardian.com/politics/2020/oct/05/how-excel-may-have-caused-loss-of-16000-covid-tests-in-england), *Guardian*, Oct. 2020
 
 ### Optional {-}
 
+* Hugo Bowne-Anderson, [What Data Scientists Really Do, According to 35 Data Scientists](https://hbr.org/2018/08/what-data-scientists-really-do-according-to-35-data-scientists), *Harvard Business Review*. 15 Aug. 2018
 * Knuth, Donald E., [Computer programming as an art](https://dl.acm.org/doi/pdf/10.1145/1283920.1283929), *ACM Turing award lectures*. 2007.
+* Thomas Herndon, Michael Ash and Robert Pollin, [Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.641.3345&rep=rep1&type=pdf), *Cambridge Journal of Economics* 2013, 1 of 23 (Sections 1 and 3)
+* Cassidy, John, [The Reinhart and Rogoff Controversy: A Summing Up](https://www.newyorker.com/news/john-cassidy/the-reinhart-and-rogoff-controversy-a-summing-up), *New Yorker*, 2013 (Note: this may be useful background reading for the paper above)
 
 ## Important Links and Files {-}
 
 * [R: The R Project for Statistical Computing](https://www.r-project.org/)
 * [The Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/)
 * [R Studio](https://www.rstudio.com/products/rstudio/) 
+* [Install R on Windows - YouTube Instructions](https://www.youtube.com/watch?v=Ohnk9hcxf9M) 
+* [Install R on Mac - YouTube Instructions](https://www.youtube.com/watch?v=uxuuWXU-7UQ) 

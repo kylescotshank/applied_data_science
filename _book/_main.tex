@@ -1,0 +1,456 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Applied Data Science I},
+  pdfauthor={Kyle Scot Shank},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+
+\title{Applied Data Science I}
+\author{Kyle Scot Shank}
+\date{2021-09-12}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{welcome}{%
+\chapter*{Welcome}\label{welcome}}
+\addcontentsline{toc}{chapter}{Welcome}
+
+\begin{figure}
+\centering
+\includegraphics[width=5.72917in,height=\textheight]{images/cover.png}
+\caption{A data visualization from Redditor \texttt{andrew\_elliott}}
+\end{figure}
+
+This is the website for the \textbf{``Applied Data Science I''} course series at College of the Atlantic. It will be part book, part course page, and part collaborative learning effort between student and faculty contributors. The focus of this document will be to teach practical and applied skills in ``data science'' using the \href{https://www.r-project.org/}{R programming language}. No formal knowledge of computer science or R programming is required and the mathematical pre-requisites will be minimal. You'll learn how to explore and visualize data from both a practical and theoretical perspective, with a special focus on the real-world implications and ethical considerations often ignored when teaching introductory data science skills and techniques. We will focus on learning a lot and having fun while doing it.
+
+\hypertarget{basic-information}{%
+\section*{Basic Information}\label{basic-information}}
+\addcontentsline{toc}{section}{Basic Information}
+
+\textbf{Instructor}: Kyle Scot Shank, '14
+
+\textbf{COA Email}: \href{mailto:ksshank@coa.edu}{\nolinkurl{ksshank@coa.edu}} (I will always try to get back to you within 24 hours, but there may be ocassional periods when I am a bit slower.)
+
+\textbf{Pronouns}: he/him/his
+
+\textbf{Class Meeting}: CHE 102 (Center for Human Ecology, Flexible Classroom), Tuesdays and Fridays, 1:00pm to 2:25pm
+
+\hypertarget{course-description}{%
+\section*{Course Description}\label{course-description}}
+\addcontentsline{toc}{section}{Course Description}
+
+This course will be both a broad overview of how ``data science'' is done in the ``real world''. We will have a specific focus on learning the \emph{craft} of data science and analytics, working to build a suite of various practical data skills that can extend across a variety of different knowledge domains.
+
+This would be a great class for those interested in an introductory exploration of data science as a topic, as well as those looking to add a degree of analytical expertise to pre-existing work and interests. We'll be focusing on four major areas of application: (1) properly building data-driven questions and hypotheses; (2) loading, cleaning, organizing, and transforming data; (3) exploratory data analysis; and (4) data visualization and communication. Leaving this class, students will be able to immediately apply these skills to a broad array of interests. For example: students should be able to generate hypotheses from disparate data sources (such as minutes from ACM), obtain and transform data from websites (like accessing data from the U.S. Census Bureau), explore and analyze data to discover patterns (such as through spatial biological data sets), and visualize such data for easy communication to peers and laypersons. We will also intersperse throughout these topics various readings and discussions related to ethics and integrity in data science and analytics to help ground our work in a more holistic, human ecological point of view.
+
+Classes will be taught as a mix of live coding exercises (bring your laptops!), lectures, and group discussions. No prior programming experience is required - we're going to be learning to use the R programming language in this course! - but a familiarity with computers and data will be helpful. Students will need to use either their personal laptop or a COA loaner laptop for class and programming exercises.
+
+\hypertarget{course-objectives}{%
+\section*{Course Objectives}\label{course-objectives}}
+\addcontentsline{toc}{section}{Course Objectives}
+
+This course has four (more or less) intertwined objectives. After completing the course, students will have both intellectual understanding and practical experience in the following domains:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Fundamentals of data wrangling}: Students will gain proficiency performing basic data importing, cleaning, and aggregating tasks using the \texttt{R} programming language.
+\item
+  \textbf{Fundamentals of exploratory data analysis}: Plan, implement, and present a research project focusing on using exploratory data analysis techniques to discuss a research question.
+\item
+  \textbf{Fundamentals of data visualization}: Create quality plots and data visualizations using \texttt{R} (generally) and the \href{https://www.tidyverse.org/}{\texttt{tidyverse}} (specifically).
+\item
+  \textbf{Fundamentals of data literacy and ethics}: Students will practice reading, writing, and communicating data in context, as well as be able to identify the nature of data sources and constructs within an analysis. Students will also gain experience in highlighting the strengths and weaknesses of a given approach, as well tying analytical decisions back to the proposed hypothesis to check for rigor and bias. We will also pay special attention to the numerous ways in which ethical considerations can inform (or be ignored by) an a given analysis.
+\end{itemize}
+
+\hypertarget{course-schedule-flow}{%
+\section*{Course Schedule \& Flow}\label{course-schedule-flow}}
+\addcontentsline{toc}{section}{Course Schedule \& Flow}
+
+You'll notice that this course changes ``feels'' several different times: the first few weeks will feel the most ``computer sciency''-y, followed by a few weeks that will feel ``statistics''-y, then a few weeks that will very much be reminiscent of a graphic design course, followed by a holistic capstone period. This is by design and reflects the inherent interdisciplinary nature of data science today.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Week 1}: Discuss syllabus, class focus, and get ourselves setup from a technical perspective.
+\item
+  \textbf{Week 2}: Introduction to R - a crash course in computer science!, as well as practice obtaining, loading, and cleaning data.
+\item
+  \textbf{Week 3}: Introduction to R - analyzing data sets
+
+  \begin{itemize}
+  \tightlist
+  \item
+    (\textbf{First Written Assignment Due: 2021-10-01})
+  \end{itemize}
+\item
+  \textbf{Week 4}: Some introductory statistics - understanding the ``shape'' of your data
+\item
+  \textbf{Week 5}: Some more introductory statistics - testing hypothesis with your data.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    (\textbf{Second Written Assignment Due: 2021-10-15})
+  \end{itemize}
+\item
+  \textbf{Week 6}: Data visualization - what does it mean to make a \emph{good} visualization
+\item
+  \textbf{Week 7}: Data visualization - conveying information with visualization
+
+  \begin{itemize}
+  \tightlist
+  \item
+    (\textbf{Third Written Assignment Due: 2021-10-29})
+  \end{itemize}
+\item
+  \textbf{Week 8}: Building a data science workflow (load, examine, visualize)
+\item
+  \textbf{Week 9}: Working on our final projects, miscellaneous topics
+
+  \begin{itemize}
+  \tightlist
+  \item
+    (\textbf{Final Project Written Component Due: 2021-11-12})
+  \end{itemize}
+\item
+  \textbf{Week 10}: In-class presentations of final projects, course wrap-up
+
+  \begin{itemize}
+  \tightlist
+  \item
+    (\textbf{Final Project Presentations: 2021-11-16})
+  \end{itemize}
+\end{itemize}
+
+\textbf{Note}: all dates and assignments subject to change.
+
+\hypertarget{evaluation}{%
+\section*{Evaluation}\label{evaluation}}
+\addcontentsline{toc}{section}{Evaluation}
+
+There will be no quota of A's, B's, etc. You may take this class according to any grading structure you prefer (letter grades, pass/fail, etc.) - please feel free to reach out early so we can discuss the best plan for you.
+
+Evaluation will be through class participation and discussion, several data investigation exercises, and a final project. The data investigations will take the form of written analyses of several well-known data sets as well as investigations of synthetic ones created specifically for the course. The final project will take the form of an oral presentation of an analysis. This can be either done in a group or as an individual and may be of any topic of sufficient interest to the student(s) involved.
+
+In general, the breakdown of course credit will be as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Class Participation}: 20\%
+\item
+  \textbf{Written Analyses}: 40\%
+\item
+  \textbf{Final Project}: 40\%
+\end{itemize}
+
+Let's define what these mean!
+
+\hypertarget{class-participation}{%
+\subsection*{Class participation}\label{class-participation}}
+\addcontentsline{toc}{subsection}{Class participation}
+
+I define class participation as a balance between \emph{presence}, \emph{attention}, and \emph{preparation}. Being \emph{present}, in my perspective, is attending class and being actively engaged in the learning process. \emph{Attention} can take a variety of different forms: some students may be more comfortable asking questions in class (either of me or of your peers), others may be more inclined to take notes and digest and absorb information on their own time, etc. \emph{Preparation} is having completed the previous readings and assignments to the best of your ability and being ready to discuss any problems (or insights!) you may have had in doing so.
+
+\hypertarget{written-analyses}{%
+\subsection*{Written Analyses}\label{written-analyses}}
+\addcontentsline{toc}{subsection}{Written Analyses}
+
+Over the course of the term, we will be working on several written analyses of data sets where you'll be applying the skills you've learned to answer specific questions \emph{or} hypotheses on what new kinds of questions could be asked. These assignments will be \textbf{submitted} individually, but you may work together in groups if you like so long as you make note of who all worked together on your submission.
+
+\hypertarget{final-project}{%
+\subsection*{Final Project}\label{final-project}}
+\addcontentsline{toc}{subsection}{Final Project}
+
+There will be a capstone project (either individual or group) focused on an in-depth analysis of a specific data set. We will discuss the final form of this project during the semester.
+
+\hypertarget{diversity-and-inclusion}{%
+\section*{Diversity and Inclusion}\label{diversity-and-inclusion}}
+\addcontentsline{toc}{section}{Diversity and Inclusion}
+
+It is my intent that students from all backgrounds and perspectives be well served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are respectful of diversity: gender, sexuality, disability, age, religion, socioeconomic status, ethnicity, race, and culture.
+
+Learning about diverse perspectives and identities is an ongoing process. I am always looking to learn more about power and privilege and the harmful effects of racism, sexism, homophobia, classism, and other forms of discrimination and oppression. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups. If something was said or done in class (by anyone, including me) that made you feel uncomfortable, please talk to me about it. You may also reach out to the Provost or Associate Deans for further information or discussion.
+
+\hypertarget{late-work}{%
+\section*{Late Work}\label{late-work}}
+\addcontentsline{toc}{section}{Late Work}
+
+Try your best to turn in work when it is due. That said - the world is pretty crazy right now. If you're going to need some extra time, please just let me know as far in advance as possible and we'll find a way to work things out.
+
+\hypertarget{covid-19-remote-instruction}{%
+\section*{COVID-19 \& Remote Instruction}\label{covid-19-remote-instruction}}
+\addcontentsline{toc}{section}{COVID-19 \& Remote Instruction}
+
+The goal for this term is to be \textbf{in-person, together} as much as possible. With that said - it's still a pandemic, so who knows what might happen. If we're going to be switching to remote instruction at any point I will make sure to post in Google Classroom as well as directly e-mail all of you as far ahead of time as I can. If we need to be remote, we'll be using Zoom.
+
+\hypertarget{textbook}{%
+\section*{Textbook}\label{textbook}}
+\addcontentsline{toc}{section}{Textbook}
+
+You're already looking at it!
+
+In all seriousness - one of the meta-goals of the Applied Data Science course series is to generate a textbook to meet the diverse needs of individuals interesting in using data science skills but who not have had exposure to the standardized math and computer science skills presupposed in introductory data science courses.
+
+We will be using the following texts. Please note that \textbf{all} of these texts are available online for free and purchase is only necessary if you'd like to have your own physical copy for reference.
+
+\begin{itemize}
+\tightlist
+\item
+  Grolemund and Wickham - \textbf{\href{https://r4ds.had.co.nz/}{R For Data Science}}
+\item
+  Peng and Matsui - \textbf{\href{https://bookdown.org/rdpeng/artofdatascience/epicycles-of-analysis.html}{The Art of Data Science}}.
+\item
+  Barr, Ceinkaya-Rundel, Diez, and OpenIntro - \textbf{\href{https://www.openintro.org/book/os/}{OpenIntro Statistics}}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Note: you'll need to download this from \href{https://leanpub.com/os}{Leanpub}. You can set the pay scale to \$0 to purchase this PDF for free - but you'll need to provide an e-mail.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{hardcopy-syllabus}{%
+\section*{Hardcopy Syllabus}\label{hardcopy-syllabus}}
+\addcontentsline{toc}{section}{Hardcopy Syllabus}
+
+If you would like to keep a copy of the syllabus, there is a download button above in the top toolboar that you can use to obtain one for your records. This may be particularly useful for students who plan to continue their graduate education after COA.
+
+\hypertarget{standard-disclaimers}{%
+\section*{Standard Disclaimers}\label{standard-disclaimers}}
+\addcontentsline{toc}{section}{Standard Disclaimers}
+
+\emph{150 hours of academic engagement}
+Our accreditation requires that we communicate that students should expect 150 hours of academic engagement for a one-credit COA course This total includes weekly meetings, fieldtrips, office hours, film screenings, readings and other assignments, service-learning, practicum, or other course requirements. You should therefore expect to spend a minimum of 150 academically engaged hours associated with this one-credit course. These 150 hours will be spent roughly as follows: 3 hr/wk ``in'' class, 4 hr/wk reading, 8 hr/wk on homework.
+
+\emph{Plagiarism}
+By enrolling in an academic institution, a student is subscribing to common standards of academic honesty. Any cheating, plagiarism, falsifying or fabricating of data is a breach of such standards. A student must make it his or her responsibility to not use words or works of others without proper acknowledgment. Plagiarism is unacceptable and evidence of such activity is reported to the academic dean or his/her designee. Two violations of academic integrity are grounds for dismissal from the college. Students should request in-class discussions of such questions when complex issues of ethical scholarship arise.
+
+\emph{Library Resources}
+Thorndike Library offers many resources and services that can assist you in your academic endeavors, including individualized research support and access to resources beyond COA. Study spaces are also available. The library is open 7 days/week. Remote access to the research databases is available 24/7. Contact \href{mailto:library@coa.edu}{\nolinkurl{library@coa.edu}} or visit the \href{www.coa.edu/library}{library website} for details.
+
+\hypertarget{license}{%
+\section*{License}\label{license}}
+\addcontentsline{toc}{section}{License}
+
+Copyright © 2021 \href{https://github.com/kylescotshank}{Kyle Scot Shank}
+
+This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+
+\hypertarget{part-getting-started}{%
+\part{Getting Started}\label{part-getting-started}}
+
+\hypertarget{introductions}{%
+\chapter{Introductions}\label{introductions}}
+
+\hypertarget{goal-for-today}{%
+\section*{Goal for Today}\label{goal-for-today}}
+\addcontentsline{toc}{section}{Goal for Today}
+
+\begin{itemize}
+\tightlist
+\item
+  Introductions, course overview
+\end{itemize}
+
+\hypertarget{readings-for-today}{%
+\section*{Readings for Today}\label{readings-for-today}}
+\addcontentsline{toc}{section}{Readings for Today}
+
+\hypertarget{required}{%
+\subsection*{Required}\label{required}}
+\addcontentsline{toc}{subsection}{Required}
+
+\begin{itemize}
+\tightlist
+\item
+  None!
+\end{itemize}
+
+\hypertarget{optional}{%
+\subsection*{Optional}\label{optional}}
+\addcontentsline{toc}{subsection}{Optional}
+
+\begin{itemize}
+\tightlist
+\item
+  None!
+\end{itemize}
+
+\hypertarget{important-links-and-files}{%
+\section*{Important Links and Files}\label{important-links-and-files}}
+\addcontentsline{toc}{section}{Important Links and Files}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://docs.google.com/presentation/d/1z7WG_krmvSzPtW7LUoVnsbVJtHaxMtnCHQwXULWnbUM/edit\#slide=id.gee3ce8d919_0_390}{Lecture slides} - these are also able to be found in the Google Classroom Drive.
+\item
+  \href{https://ads-coa.netlify.app/}{The class website} - you should probably bookmark this!
+\end{itemize}
+
+\hypertarget{gettting-started}{%
+\chapter{Gettting Started}\label{gettting-started}}
+
+\hypertarget{goal-for-today-1}{%
+\section*{Goal for Today}\label{goal-for-today-1}}
+\addcontentsline{toc}{section}{Goal for Today}
+
+\begin{itemize}
+\tightlist
+\item
+  Getting R and RStudio installed and functioning for everybody
+\item
+  Discussing why we're using R vs.~other programming languages (like Python)
+\item
+  Some example analyses
+\end{itemize}
+
+\hypertarget{readings-for-today-1}{%
+\section*{Readings for Today}\label{readings-for-today-1}}
+\addcontentsline{toc}{section}{Readings for Today}
+
+\hypertarget{required-1}{%
+\subsection*{Required}\label{required-1}}
+\addcontentsline{toc}{subsection}{Required}
+
+\begin{itemize}
+\tightlist
+\item
+  Peng, \href{https://bookdown.org/rdpeng/rprogdatascience/history-and-overview-of-r.html}{R Programming for Data Science - Chapter 2, History and Overview of R}
+\item
+  OpenIntro to Statistics, Sections 1.1 and 1.2
+\item
+  Ziemann et al., \href{https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-016-1044-7.pdf}{Gene name errors are widespread in the
+  scientific literature}, \emph{Genome Biology} (2016) 17:177
+  DOI 10.1186/s13059-016-1044-7
+\end{itemize}
+
+\hypertarget{optional-1}{%
+\subsection*{Optional}\label{optional-1}}
+\addcontentsline{toc}{subsection}{Optional}
+
+\begin{itemize}
+\tightlist
+\item
+  Hugo Bowne-Anderson, \href{https://hbr.org/2018/08/what-data-scientists-really-do-according-to-35-data-scientists}{What Data Scientists Really Do, According to 35 Data Scientists}, \emph{Harvard Business Review}. 15 Aug.~2018
+\item
+  Knuth, Donald E., \href{https://dl.acm.org/doi/pdf/10.1145/1283920.1283929}{Computer programming as an art}, \emph{ACM Turing award lectures}. 2007.
+\item
+  Thomas Herndon, Michael Ash and Robert Pollin, \href{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.641.3345\&rep=rep1\&type=pdf}{Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff}, \emph{Cambridge Journal of Economics} 2013, 1 of 23 (Sections 1 and 3)
+\item
+  Cassidy, John, \href{https://www.newyorker.com/news/john-cassidy/the-reinhart-and-rogoff-controversy-a-summing-up}{The Reinhart and Rogoff Controversy: A Summing Up}, \emph{New Yorker}, 2013 (Note: this may be useful background reading for the paper above)
+\end{itemize}
+
+\hypertarget{important-links-and-files-1}{%
+\section*{Important Links and Files}\label{important-links-and-files-1}}
+\addcontentsline{toc}{section}{Important Links and Files}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.r-project.org/}{R: The R Project for Statistical Computing}
+\item
+  \href{https://cran.r-project.org/}{The Comprehensive R Archive Network (CRAN)}
+\item
+  \href{https://www.rstudio.com/products/rstudio/}{R Studio}
+\item
+  \href{https://www.youtube.com/watch?v=Ohnk9hcxf9M}{Install R on Windows - YouTube Instructions}
+\item
+  \href{https://www.youtube.com/watch?v=uxuuWXU-7UQ}{Install R on Mac - YouTube Instructions}
+\end{itemize}
+
+\hypertarget{part-a-crash-course-in-r-pt.-i}{%
+\part{A Crash Course in R (pt.~I)}\label{part-a-crash-course-in-r-pt.-i}}
+
+\hypertarget{part-a-crash-course-in-r-pt.-ii}{%
+\part{A Crash Course in R (pt.~II)}\label{part-a-crash-course-in-r-pt.-ii}}
+
+\hypertarget{part-introducing-statistics}{%
+\part{Introducing: Statistics!}\label{part-introducing-statistics}}
+
+\hypertarget{part-even-more-statistics}{%
+\part{Even More Statistics!}\label{part-even-more-statistics}}
+
+\hypertarget{part-data-visualization-basics}{%
+\part{Data Visualization Basics}\label{part-data-visualization-basics}}
+
+\hypertarget{part-data-viz-good-bag-and-ugly}{%
+\part{Data Viz: Good, Bag, and Ugly}\label{part-data-viz-good-bag-and-ugly}}
+
+\hypertarget{part-building-workflows}{%
+\part{Building Workflows}\label{part-building-workflows}}
+
+\end{document}
