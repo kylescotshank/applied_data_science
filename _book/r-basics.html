@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 2 Gettting Started | Applied Data Science I</title>
+  <title>Lesson 3 R Basics | Applied Data Science I</title>
   <meta name="description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 2 Gettting Started | Applied Data Science I" />
+  <meta property="og:title" content="Lesson 3 R Basics | Applied Data Science I" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://ads-coa.netlify.app/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="kylescotshank/applied_data_science" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 2 Gettting Started | Applied Data Science I" />
+  <meta name="twitter:title" content="Lesson 3 R Basics | Applied Data Science I" />
   <meta name="twitter:site" content="@kylescotshank" />
   <meta name="twitter:description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introductions.html"/>
-<link rel="next" href="r-basics-intro.html"/>
+<link rel="prev" href="gettting-started.html"/>
+
 <script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -127,21 +127,13 @@
 <li class="chapter" data-level="" data-path="gettting-started.html"><a href="gettting-started.html#important-links-and-files-1"><i class="fa fa-check"></i>Important Links and Files</a></li>
 </ul></li>
 <li class="part"><span><b>II A Crash Course in R (pt. I)</b></span></li>
-<li class="chapter" data-level="3" data-path="r-basics-intro.html"><a href="r-basics-intro.html"><i class="fa fa-check"></i><b>3</b> R Basics: Intro</a><ul>
-<li class="chapter" data-level="" data-path="r-basics-intro.html"><a href="r-basics-intro.html#goal-for-today-2"><i class="fa fa-check"></i>Goal for Today</a></li>
-<li class="chapter" data-level="" data-path="r-basics-intro.html"><a href="r-basics-intro.html#readings-for-today-2"><i class="fa fa-check"></i>Readings for Today</a><ul>
-<li class="chapter" data-level="" data-path="r-basics-intro.html"><a href="r-basics-intro.html#required-2"><i class="fa fa-check"></i>Required</a></li>
-<li class="chapter" data-level="" data-path="r-basics-intro.html"><a href="r-basics-intro.html#optional-2"><i class="fa fa-check"></i>Optional</a></li>
+<li class="chapter" data-level="3" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>3</b> R Basics</a><ul>
+<li class="chapter" data-level="" data-path="r-basics.html"><a href="r-basics.html#goal-for-today-2"><i class="fa fa-check"></i>Goal for Today</a></li>
+<li class="chapter" data-level="" data-path="r-basics.html"><a href="r-basics.html#readings-for-today-2"><i class="fa fa-check"></i>Readings for Today</a><ul>
+<li class="chapter" data-level="" data-path="r-basics.html"><a href="r-basics.html#required-2"><i class="fa fa-check"></i>Required</a></li>
+<li class="chapter" data-level="" data-path="r-basics.html"><a href="r-basics.html#optional-2"><i class="fa fa-check"></i>Optional</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="r-basics-intro.html"><a href="r-basics-intro.html#important-links-and-files-2"><i class="fa fa-check"></i>Important Links and Files</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="r-basics-data-sets.html"><a href="r-basics-data-sets.html"><i class="fa fa-check"></i><b>4</b> R Basics: Data Sets</a><ul>
-<li class="chapter" data-level="" data-path="r-basics-data-sets.html"><a href="r-basics-data-sets.html#goal-for-today-3"><i class="fa fa-check"></i>Goal for Today</a></li>
-<li class="chapter" data-level="" data-path="r-basics-data-sets.html"><a href="r-basics-data-sets.html#readings-for-today-3"><i class="fa fa-check"></i>Readings for Today</a><ul>
-<li class="chapter" data-level="" data-path="r-basics-data-sets.html"><a href="r-basics-data-sets.html#required-3"><i class="fa fa-check"></i>Required</a></li>
-<li class="chapter" data-level="" data-path="r-basics-data-sets.html"><a href="r-basics-data-sets.html#optional-3"><i class="fa fa-check"></i>Optional</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="r-basics-data-sets.html"><a href="r-basics-data-sets.html#important-links-and-files-3"><i class="fa fa-check"></i>Important Links and Files</a></li>
+<li class="chapter" data-level="" data-path="r-basics.html"><a href="r-basics.html#important-links-and-files-2"><i class="fa fa-check"></i>Important Links and Files</a></li>
 </ul></li>
 <li class="part"><span><b>III A Crash Course in R (pt. II)</b></span></li>
 <li class="part"><span><b>IV Introducing: Statistics!</b></span></li>
@@ -169,50 +161,57 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="gettting-started" class="section level1">
-<h1><span class="header-section-number">Lesson 2</span> Gettting Started</h1>
-<div id="goal-for-today-1" class="section level2 unnumbered">
+<div id="r-basics" class="section level1">
+<h1><span class="header-section-number">Lesson 3</span> R Basics</h1>
+<div id="goal-for-today-2" class="section level2 unnumbered">
 <h2>Goal for Today</h2>
 <ul>
-<li>Getting R and RStudio installed and functioning for everybody</li>
-<li>Discussing why we’re using R vs. other programming languages (like Python)</li>
-<li>Some example analyses</li>
+<li>Ger comfortable with some basics of R and computer programming</li>
+<li>Learn some very useful commands in R!</li>
 </ul>
 </div>
-<div id="readings-for-today-1" class="section level2 unnumbered">
+<div id="readings-for-today-2" class="section level2 unnumbered">
 <h2>Readings for Today</h2>
-<div id="required-1" class="section level3 unnumbered">
+<div id="required-2" class="section level3 unnumbered">
 <h3>Required</h3>
 <ul>
-<li>Peng, <a href="https://bookdown.org/rdpeng/rprogdatascience/history-and-overview-of-r.html">R Programming for Data Science - Chapter 2, History and Overview of R</a></li>
-<li>OpenIntro to Statistics, Sections 1.1 and 1.2</li>
-<li>Ziemann et al., <a href="https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-016-1044-7.pdf">Gene name errors are widespread in the
-scientific literature</a>, <em>Genome Biology</em> (2016) 17:177
-DOI 10.1186/s13059-016-1044-7</li>
-<li>Alex Hern, <a href="https://www.theguardian.com/politics/2020/oct/05/how-excel-may-have-caused-loss-of-16000-covid-tests-in-england">Covid: how Excel may have caused loss of 16,000 test results in England</a>, <em>Guardian</em>, Oct. 2020</li>
+<li>Peng, <a href="https://bookdown.org/rdpeng/rprogdatascience/r-nuts-and-bolts.html">R Programming for Data Science - Chapter 4, R Nuts and Bolts</a></li>
+<li>Grolemund, <a href="https://rstudio-education.github.io/hopr/project-1-weighted-dice.html">Hands on Programming with R - Part I</a>
+<ul>
+<li>You may get the most benefit from these two chapters by reading and and simultaneously “coding along”!</li>
+</ul></li>
 </ul>
 </div>
-<div id="optional-1" class="section level3 unnumbered">
+<div id="optional-2" class="section level3 unnumbered">
 <h3>Optional</h3>
-<ul>
-<li>Hugo Bowne-Anderson, <a href="https://hbr.org/2018/08/what-data-scientists-really-do-according-to-35-data-scientists">What Data Scientists Really Do, According to 35 Data Scientists</a>, <em>Harvard Business Review</em>. 15 Aug. 2018</li>
-<li>Knuth, Donald E., <a href="https://dl.acm.org/doi/pdf/10.1145/1283920.1283929">Computer programming as an art</a>, <em>ACM Turing award lectures</em>. 2007.</li>
-<li>Thomas Herndon, Michael Ash and Robert Pollin, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.641.3345&amp;rep=rep1&amp;type=pdf">Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff</a>, <em>Cambridge Journal of Economics</em> 2013, 1 of 23 (Sections 1 and 3)</li>
-<li>Cassidy, John, <a href="https://www.newyorker.com/news/john-cassidy/the-reinhart-and-rogoff-controversy-a-summing-up">The Reinhart and Rogoff Controversy: A Summing Up</a>, <em>New Yorker</em>, 2013 (Note: this may be useful background reading for the paper above)</li>
-</ul>
+<p>None Today!</p>
 </div>
 </div>
-<div id="important-links-and-files-1" class="section level2 unnumbered">
+<div id="important-links-and-files-2" class="section level2 unnumbered">
 <h2>Important Links and Files</h2>
-<ul>
-<li><a href="https://www.r-project.org/">R: The R Project for Statistical Computing</a></li>
-<li><a href="https://cran.r-project.org/">The Comprehensive R Archive Network (CRAN)</a></li>
-<li><a href="https://www.rstudio.com/products/rstudio/">R Studio</a></li>
-<li><a href="https://www.youtube.com/watch?v=Ohnk9hcxf9M">Install R on Windows - YouTube Instructions</a></li>
-<li><a href="https://www.youtube.com/watch?v=uxuuWXU-7UQ">Install R on Mac - YouTube Instructions</a></li>
-</ul>
+<p>Come back after class to see our collaborative file posted here!</p>
 
 </div>
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
 </div>
 
 
@@ -223,8 +222,8 @@ DOI 10.1186/s13059-016-1044-7</li>
           </div>
         </div>
       </div>
-<a href="introductions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r-basics-intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="gettting-started.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -255,7 +254,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kylescotshank/applied_data_science01_02_DownloadingAndInstallingR.Rmd",
+"link": "https://github.com/kylescotshank/applied_data_science02_01_TheBasicsPart1.Rmd",
 "text": "Edit"
 },
 "history": {

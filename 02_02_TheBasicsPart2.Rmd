@@ -1,0 +1,21 @@
+# R Basics: Data Sets
+
+## Goal for Today {-} 
+
+* Practice loading a variety of different data sets into R 
+* Learning about data frames, tibbles, and the `tidyverse` packages
+
+## Readings for Today {-} 
+
+### Required {-}
+
+* Peng, [R Programming for Data Science - Chapter 5, Getting Data In and Out of R and Chapter 6, Using the `readr` Package](https://bookdown.org/rdpeng/rprogdatascience/getting-data-in-and-out-of-r.html) 
+* Grolemund and Wickham, [R for Data Science - Part II](https://r4ds.had.co.nz/data-import.html)
+
+### Optional {-}
+
+* Julian Flowers, [Keep data tidy: A plea to data publishers and developers](https://nhsrcommunity.com/blog/keep-data-tidy-a-plea-to-data-publishers-and-developers/)
+
+## Important Links and Files {-}
+
+Come back after class to see our collaborative file posted here! 

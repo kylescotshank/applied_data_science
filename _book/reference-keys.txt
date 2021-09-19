@@ -1,2 +1,4 @@
 introductions
 gettting-started
+r-basics-intro
+r-basics-data-sets

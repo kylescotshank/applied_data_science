@@ -1,0 +1,22 @@
+# R Basics: Intro
+
+## Goal for Today {-} 
+
+* Get comfortable with some basics of R and computer programming 
+* Learn some very useful commands in R! 
+
+## Readings for Today {-} 
+
+### Required {-}
+
+* Peng, [R Programming for Data Science - Chapter 4, R Nuts and Bolts](https://bookdown.org/rdpeng/rprogdatascience/r-nuts-and-bolts.html) 
+* Grolemund, [Hands on Programming with R - Part I](https://rstudio-education.github.io/hopr/project-1-weighted-dice.html)
+  * You may get the most benefit from these two chapters by reading and and simultaneously "coding along"!
+
+### Optional {-}
+
+None Today! 
+
+## Important Links and Files {-}
+
+Come back after class to see our collaborative file posted here! 
