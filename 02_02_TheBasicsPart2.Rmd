@@ -1,6 +1,6 @@
 # R Basics: Data Sets
 
-## Goal for Today {-} 
+## Goals for Today {-} 
 
 * Practice loading a variety of different data sets into R 
 * Learning about data frames, tibbles, and the `tidyverse` packages

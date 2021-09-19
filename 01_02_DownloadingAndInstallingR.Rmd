@@ -1,6 +1,6 @@
 # Gettting Started
 
-## Goal for Today {-} 
+## Goals for Today {-} 
 
 * Getting R and RStudio installed and functioning for everybody 
 * Discussing why we're using R vs. other programming languages (like Python)

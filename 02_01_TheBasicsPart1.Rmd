@@ -1,6 +1,6 @@
 # R Basics: Intro
 
-## Goal for Today {-} 
+## Goals for Today {-} 
 
 * Get comfortable with some basics of R and computer programming 
 * Learn some very useful commands in R! 

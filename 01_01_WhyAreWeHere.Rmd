@@ -5,7 +5,7 @@ output:
 ---
 # Introductions
 
-## Goal for Today {-} 
+## Goals for Today {-} 
 
 * Introductions, course overview 
 
