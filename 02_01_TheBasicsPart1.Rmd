@@ -19,4 +19,4 @@ None Today!
 
 ## Important Links and Files {-}
 
-Come back after class to see our collaborative file posted here! 
+Class work file available for review [here](https://github.com/kylescotshank/applied_data_science/blob/master/Week2_Class1_InClassExamples.R)
