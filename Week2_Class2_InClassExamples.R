@@ -34,10 +34,15 @@ dim(iris)
 # This will return your column names
 names(iris)
 
+# This is the best of all worlds and tells you alllll sorts of stuff
 str(iris)
 
+# This does exactly what we think it should - it tells us the summary statistics of a dat set! 
 summary(iris)
 
+# Remember inside to outside: this first checks to see if any
+# element of this dataframe is empty or missing, then sums up how many times
+# that is TRUE 
 sum(is.na(iris))
 
 plot(iris)
