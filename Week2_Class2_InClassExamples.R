@@ -16,15 +16,22 @@
 # Let's load in some data that comes with R 
 ?data
 
+# This command shows you allllllllll the data sets available for your use
 data()
 
+# This command loads the iris dataset into your global environment
 data(iris)
 ?iris
 
+# This lets you visually peek!
 View(iris)
+# This doesn't do anything :(
 view(iris)
 
+# This will return the dimensions of your data set
 dim(iris)
+
+# This will return your column names
 names(iris)
 
 str(iris)

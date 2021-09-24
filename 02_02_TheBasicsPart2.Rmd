@@ -18,4 +18,4 @@
 
 ## Important Links and Files {-}
 
-Our working file from class today is available **[here](https://github.com/kylescotshank/applied_data_science/raw/master/data/climate_change_download_0.xls)**
+Our working file from class today is available **[here](https://github.com/kylescotshank/applied_data_science/blob/master/Week2_Class1_InClassExamples.R)**
