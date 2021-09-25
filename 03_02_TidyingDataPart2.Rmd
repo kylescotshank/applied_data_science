@@ -1,0 +1,20 @@
+# Tidy(ing) Data - Part 2
+
+## Goals for Today {-} 
+
+* * Get more exposure and practice with the tidying functions: `pivoting`, `gather`, `spread`, and more! 
+
+## Readings for Today {-} 
+
+### Required {-}
+
+* Grolemund and Wickham, [R for Data Science - Chapter 12, Tidy Data](https://r4ds.had.co.nz/tidy-data.html)
+  * Note: you don't have to do the exercises! 
+
+### Optional {-}
+
+None!
+
+## Important Links and Files {-}
+
+* Our working file from class will be available [here]()
