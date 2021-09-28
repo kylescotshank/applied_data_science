@@ -17,4 +17,4 @@ None!
 
 ## Important Links and Files {-}
 
-* Our working file from class will be available [here]()
+* The file we worked on in class is available [here]()
