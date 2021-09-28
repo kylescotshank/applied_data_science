@@ -20,7 +20,7 @@ None!
 ## Important Links and Files {-}
 
 * [This cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf) will likely be invaluable! 
-* The file we worked on in class is available [here]()
+* The file we worked on in class is available [here](https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/Week3_Class1_InClassExamples.R)
 
 ## Written Assignment #1 {-}
 
