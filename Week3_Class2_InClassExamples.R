@@ -112,7 +112,37 @@ billboard %>%
 
 
 
+# ---------------------------------------------------------------
+# Let's practice some more! 
+# ---------------------------------------------------------------
 
-# ---------------------------------------------------------------
-# Let's go find a dataset together! 
-# ---------------------------------------------------------------
+devtools::install_github("uc-cfss/rcfss")
+
+library(rcfss)
+
+
+data(grades)
+
+# what's wrong with this dataset? 
+
+# one way to fix it! 
+
+grades %>% 
+  pivot_longer(
+    Fall:Winter,
+    names_to = "Season",
+    values_to = "Score"
+  )
+
+# ahhh, but we still have an issue - we have multiple rows per observation (see row 1 and row 7). One more step! 
+
+grades %>% 
+  pivot_longer(
+    Fall:Winter,
+    names_to = "Season",
+    values_to = "Score"
+  ) %>% 
+  pivot_wider(
+    names_from = Test,
+    values_from = Score
+  )
