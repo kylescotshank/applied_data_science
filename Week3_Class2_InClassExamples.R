@@ -27,6 +27,7 @@
 library(tidyverse)
 data("relig_income")
 relig_income
+View(relig_income)
 
 # What makes this dataset untidy?
 # ...
@@ -43,6 +44,9 @@ sum(relig_income[1,2:11])
 
 relig_income %>% 
   pivot_longer(!religion, names_to = "income", values_to = "count")
+
+relig_income %>%
+  pivot_longer(`<$10k`:`Don't know/refused`, names_to = "income", values_to = "count")
 
 
 # Let's actually answer the question above 
@@ -61,6 +65,7 @@ relig_income %>%
 
 data(us_rent_income)
 us_rent_income
+View(us_rent_income)
 
 # hmmmm, this is not tidy! Let's tidy it up. 
 
@@ -69,7 +74,8 @@ us_rent_income %>%
 
 # now we can answer questions about it! 
 
-
+us_rent_income_cleaned <- us_rent_income %>%
+  pivot_wider(names_from = variable, values_from = c(estimate, moe))
 
 
 
@@ -79,12 +85,19 @@ us_rent_income %>%
 
 data(billboard)
 billboard
-
+View(billboard)
 # Let's clean this up! 
+
+
+
+billboard %>%
+  pivot_longer(wk1:wk76, names_to = 'week', values_to = 'count')
+
+
 
 billboard %>% 
   pivot_longer(
-    # this identifies which rows we want to pivog!
+    # this identifies which rows we want to pivot!
     wk1:wk76, 
     # this tells us the new name of the column
     names_to = "week", 
@@ -94,7 +107,7 @@ billboard %>%
 
 # That's much better! Let's go even a little farther ...
 
-billboard %>% 
+billboard_cleaned <- billboard %>% 
   pivot_longer(
     wk1:wk76, 
     names_to = "week", 
@@ -104,12 +117,36 @@ billboard %>%
   mutate(
     # this cleans up the "week" column and turns it into an integer - helpful for ordering! 
     week = as.integer(gsub("wk", "", week)),
-    # this makes sure that the "date.entered" column becomes a date! 
-    date = as.Date(date.entered) + 7 * (week - 1),
   ) %>% 
   # this drops the now unnecessary date column! 
   select(-date.entered)
 
+
+billboard_cleaned %>% 
+  group_by(artist) %>% 
+  summarize(avg_by_artist = mean(rank)) %>%
+  arrange(avg_by_artist)
+
+
+billboard_cleaned
+
+billboard_cleaned %>% 
+  group_by(artist) %>% 
+  summarize(count = n()) %>%
+  arrange(desc(count))
+
+billboard_cleaned %>%
+  group_by(artist, track) %>%
+  summarize(count = n()) %>%
+  arrange(artist) %>% 
+  group_by(artist) %>%
+  summarize(count = n()) %>%
+  arrange(desc(count))
+
+billboard_cleaned %>%
+  filter(artist == 'Jay-Z') %>%
+  select(track) %>%
+  distinct()
 
 
 # ---------------------------------------------------------------
