@@ -24,6 +24,7 @@
 # Verb #1: pivot_longer()
 # ---------------------------------------------------------------
 
+library(tidyverse)
 data("relig_income")
 relig_income
 
