@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 5 Tidy(ing) Data - Part 1 | Applied Data Science I</title>
+  <title>Lesson 7 Statistics: Central Tendency | Applied Data Science I</title>
   <meta name="description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 5 Tidy(ing) Data - Part 1 | Applied Data Science I" />
+  <meta property="og:title" content="Lesson 7 Statistics: Central Tendency | Applied Data Science I" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://ads-coa.netlify.app/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="kylescotshank/applied_data_science" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 5 Tidy(ing) Data - Part 1 | Applied Data Science I" />
+  <meta name="twitter:title" content="Lesson 7 Statistics: Central Tendency | Applied Data Science I" />
   <meta name="twitter:site" content="@kylescotshank" />
   <meta name="twitter:description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="r-basics-data-sets.html"/>
-<link rel="next" href="tidying-data---part-2.html"/>
+<link rel="prev" href="tidying-data---part-2.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -198,98 +198,75 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tidying-data---part-1" class="section level1">
-<h1><span class="header-section-number">Lesson 5</span> Tidy(ing) Data - Part 1</h1>
-<div id="goals-for-today-4" class="section level2 unnumbered">
+<div id="statistics-central-tendency" class="section level1">
+<h1><span class="header-section-number">Lesson 7</span> Statistics: Central Tendency</h1>
+<div id="goals-for-today-6" class="section level2 unnumbered">
 <h2>Goals for Today</h2>
 <ul>
-<li>Get more exposure and practice with standard <code>tidyverse</code> commands, such as <code>select</code>, <code>filter</code>, <code>mutate</code>, and others!</li>
+<li>Today we’re going to be talking all about central tendency and dispersion!
+<ul>
+<li>Note: we’re going to take our time over these next two weeks as I know that not everyone will feel as comfortable as we enter into the “math” portion of the course. I’ll provide as many links to supplemental materials and videos as possible to the “optional” reading area - so make sure to check those out!</li>
+</ul></li>
 </ul>
 </div>
-<div id="readings-for-today-4" class="section level2 unnumbered">
+<div id="readings-for-today-6" class="section level2 unnumbered">
 <h2>Readings for Today</h2>
-<div id="required-4" class="section level3 unnumbered">
+<div id="required-6" class="section level3 unnumbered">
 <h3>Required</h3>
 <ul>
-<li>Martin Nyamu, <a href="https://rpubs.com/AnalystNyamu/507453">Data Cleaning in RStudio</a>
-<ul>
-<li>This is a good analytical exercise you can follow along with to try out.</li>
-</ul></li>
-<li>Grolemund and Wickham, <a href="https://r4ds.had.co.nz/transform.html">R for Data Science - Chapter 5, Data Transformations</a>
+<li>OpenIntro Statistics, <strong>2.0,2.1,2.2</strong> (Pages 39 - 71)
 <ul>
 <li>Note: you don’t have to do the exercises!</li>
 </ul></li>
+<li>Navarro, DJ., <a href="https://bookdown.org/ekothe/navarro26/descriptives.html">Learning statistics with R: A tutorial for psychology students and other beginners - 5.1,5.2,5.3</a>
+<ul>
+<li>Note: you don’t need the data or to code along -this may just be helpful supplemental reading to the textbook if you’d like to see these commands “in R”.</li>
+</ul></li>
 </ul>
 </div>
-<div id="optional-4" class="section level3 unnumbered">
+<div id="optional-6" class="section level3 unnumbered">
 <h3>Optional</h3>
-<p>None!</p>
+<ul>
+<li>If you’re a little uncomfortable with math (and that’s okay!), some of these YouTube videos could help as refreshers:
+<ul>
+<li><a href="https://www.youtube.com/watch?v=k3aKKasOmIw">Khan Academy - Central Tendency</a></li>
+<li><a href="https://www.youtube.com/watch?v=E4HAYd0QnRc">Khan Academy - Measures of Dispersion</a></li>
+<li><a href="https://www.youtube.com/watch?v=TM033GCU-SY">What is Kurtosis? (+ the “peakedness” controversy!)</a></li>
+</ul></li>
+</ul>
 </div>
 </div>
-<div id="important-links-and-files-4" class="section level2 unnumbered">
+<div id="important-links-and-files-6" class="section level2 unnumbered">
 <h2>Important Links and Files</h2>
 <ul>
-<li><a href="https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf">This cheatsheet</a> will likely be invaluable!</li>
-<li>The file we worked on in class is available <a href="https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/Week3_Class1_InClassExamples.R">here</a></li>
+<li>The file we worked on in class is available <a href="">here</a></li>
 </ul>
-</div>
-<div id="written-assignment-1" class="section level2 unnumbered">
-<h2>Written Assignment #1</h2>
-<div id="details" class="section level3 unnumbered">
-<h3>Details</h3>
-<ul>
-<li><strong>Due Date</strong>:
-<ul>
-<li>2021-10-01 (<strong>this Friday!</strong>) prior to the start of class (i.e., needs to be submitted before 1PM EST).</li>
-</ul></li>
-<li><strong>Format</strong>:
-<ul>
-<li>You’ll submit this via <a href="https://classroom.google.com/u/1/c/Mzc4NjkwNTgyNDM5">Google Classroom</a>. It can be in whatever format you like - so long as it uploads!</li>
-</ul></li>
-<li><strong>Working Style</strong>
-<ul>
-<li>You can do this individually or as a group - it is entirely up to you! If you do work in groups, please make note in the document that you did so and list everyone’s name.</li>
-</ul></li>
-</ul>
-</div>
-<div id="data" class="section level3 unnumbered">
-<h3>Data</h3>
-<p>Hungry? If you’re not - you’re about to be. We’re going to be diving into a data set about delicious, sugary, probably-pretty-bad-for-you American breakfast cerals!</p>
-<p>The context and background of this data can be found <a href="https://www.kaggle.com/crawford/80-cereals?select=cereal.csv">here</a>. You’ll need to look here to see what the columns mean (this is also known as a “data dictionary”).</p>
-<p>The data itself can be downloaded from <a href="https://www.kaggle.com/crawford/80-cereals/download">here</a>. If you would like to get the .csv file without having to unzip it, you can grab it from the course github in the /data directory <a href="https://github.com/kylescotshank/applied_data_science/tree/master/data">here</a>.</p>
-</div>
-<div id="questions" class="section level3 unnumbered">
-<h3>Questions</h3>
-<p>Answer these as thoroughly as you can and please provide the code that you’ve used to generate your answer.</p>
-<ol style="list-style-type: decimal">
-<li><p>What are the dimensions of this data set?</p></li>
-<li><p>How many columns in this data set have a character data type?</p></li>
-<li><p>Which manufacturer has the most cereals in this data? How many rows of the dataset does thie manufacturer represent?</p></li>
-<li><p>What is the name of the cereal manufactured by American Home Food Products?</p></li>
-<li><p>Which three breakfast cereals have the lowest calorie count per serving?</p></li>
-<li><p>Which cold breakfast cereal from Quaker Oats has the highest overall rating?</p></li>
-<li><p>If you sum the grams of sugar and grams of carbohydrates, which hot cereal brand has the highest combination?</p></li>
-<li><p>How many rows in this data set contain a negative value?</p></li>
-<li><p>Which cereal on the 1st display shelf has the highest amount of fiber <em>and</em> the lowest amount of sodium?</p></li>
-<li><p>What percentage of the cereals in this dataset are hot breakfast cereals?</p></li>
-<li><p>Which shelf has the highest mean (i.e., average) percentage of daily vitamins per serving?</p></li>
-<li><p>Which manufacturer has the highest percentage of cereals found on the 3rd shelf?</p></li>
-<li><p>What is the range between the highest and lowest rating?</p></li>
-<li><p>Which cereal brand has the highest number of grams of fat per calorie?</p></li>
-<li><p>If you had to guess which of these cereal brands may have had the most data input and/r data collection errors, which one would you guess and why?</p></li>
-</ol>
-<p><strong>Bonus question</strong>: which cereal brand has the most number of words in it’s name? To answer this, try taking a peek at the function <code>str_count</code> with <code>?str_count</code> and see how it works. Just giving the answer to this doesn’t count - showing me a valid command or series of commands that produces it will be worth some extra credit!</p>
 
 </div>
 </div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="r-basics-data-sets.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="tidying-data---part-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tidying-data---part-2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -320,7 +297,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kylescotshank/applied_data_science03_01_TidyingDataPart1.Rmd",
+"link": "https://github.com/kylescotshank/applied_data_science04_01_Statistics_SummaryStatistics.Rmd",
 "text": "Edit"
 },
 "history": {
