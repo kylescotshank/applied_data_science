@@ -1,4 +1,4 @@
-# Statistics: Central Tendency
+# Statistics!: Central Tendency
 
 ## Goals for Today {-} 
 
@@ -9,7 +9,7 @@
 
 ### Required {-}
 
-* OpenIntro Statistics, **2.0,2.1,2.2** (Pages 39 - 71)
+* OpenIntro Statistics, **2.0, 2.1, 2.2** (Pages 39 - 71)
   * Note: you don't have to do the exercises! 
 * Navarro, DJ., [Learning statistics with R: A tutorial for psychology students and other beginners - 5.1,5.2,5.3](https://bookdown.org/ekothe/navarro26/descriptives.html)
   * Note: you don't need the data or to code along -this may just be helpful supplemental reading to the textbook if you'd like to see these commands "in R". 

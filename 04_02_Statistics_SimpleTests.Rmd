@@ -1,0 +1,24 @@
+# Statistics!: Statistical Tests
+
+## Goals for Today {-} 
+
+* Today we're going to be talking about simple statistical tests, such as tests between proportions and *t*-tests.
+
+## Readings for Today {-} 
+
+### Required {-}
+
+* OpenIntro Statistics, **All of Chapters 5 and 6, 7.1 + 7.3** 
+  * Note: **yes**, this looks like a lot of reading - but when you remeber that you do not have to do the exercises, this cuts down substantially on the actual page count. Focus specifically on understanding **concepts** (such as "what is a point estimate" and "what is a hypothesis test") versus trying to worry about memorizing any formulae. 
+  * Other note: you can skip the sections about the Central Limit Theorem unless you'd like to have a deeper technical understanding of some of the stuff we're going t obe doing. 
+
+### Optional {-}
+
+* If you're a little uncomfortable with math (and that's okay!), some of these YouTube videos could help as refreshers: 
+  * [Khan Academy - Point Estimates and Margins of Error](https://www.khanacademy.org/math/ap-statistics/xfb5d8e68:inference-categorical-proportions/introduction-confidence-intervals/v/confidence-intervals-and-margin-of-error) 
+  * [Khan Academy - Hypothesis Testing](https://www.youtube.com/watch?v=-FtlH4svqx4)
+  * [Khan Academy - *p*-values and Significance Testing](https://www.youtube.com/watch?v=HOyNEU94xJQ) 
+
+## Important Links and Files {-}
+
+* The file we worked on in class is available [here]()

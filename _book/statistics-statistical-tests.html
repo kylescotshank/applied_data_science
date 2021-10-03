@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 4 R Basics: Data Sets | Applied Data Science I</title>
+  <title>Lesson 8 Statistics!: Statistical Tests | Applied Data Science I</title>
   <meta name="description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 4 R Basics: Data Sets | Applied Data Science I" />
+  <meta property="og:title" content="Lesson 8 Statistics!: Statistical Tests | Applied Data Science I" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://ads-coa.netlify.app/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="kylescotshank/applied_data_science" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 4 R Basics: Data Sets | Applied Data Science I" />
+  <meta name="twitter:title" content="Lesson 8 Statistics!: Statistical Tests | Applied Data Science I" />
   <meta name="twitter:site" content="@kylescotshank" />
   <meta name="twitter:description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="r-basics-intro.html"/>
-<link rel="next" href="tidying-data---part-1.html"/>
+<link rel="prev" href="statistics-central-tendency.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -206,36 +206,57 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r-basics-data-sets" class="section level1">
-<h1><span class="header-section-number">Lesson 4</span> R Basics: Data Sets</h1>
-<div id="goals-for-today-3" class="section level2 unnumbered">
+<div id="statistics-statistical-tests" class="section level1">
+<h1><span class="header-section-number">Lesson 8</span> Statistics!: Statistical Tests</h1>
+<div id="goals-for-today-7" class="section level2 unnumbered">
 <h2>Goals for Today</h2>
 <ul>
-<li>Practice loading a variety of different data sets into R</li>
-<li>Learning about data frames, tibbles, and the <code>tidyverse</code> packages</li>
+<li>Today we’re going to be talking about simple statistical tests, such as tests between proportions and <em>t</em>-tests.</li>
 </ul>
 </div>
-<div id="readings-for-today-3" class="section level2 unnumbered">
+<div id="readings-for-today-7" class="section level2 unnumbered">
 <h2>Readings for Today</h2>
-<div id="required-3" class="section level3 unnumbered">
+<div id="required-7" class="section level3 unnumbered">
 <h3>Required</h3>
 <ul>
-<li>Peng, <a href="https://bookdown.org/rdpeng/rprogdatascience/getting-data-in-and-out-of-r.html">R Programming for Data Science - Chapter 5, Getting Data In and Out of R and Chapter 6, Using the <code>readr</code> Package</a></li>
-<li>Grolemund and Wickham, <a href="https://r4ds.had.co.nz/data-import.html">R for Data Science - Part II</a></li>
+<li>OpenIntro Statistics, <strong>All of Chapters 5 and 6, 7.1 + 7.3</strong>
+<ul>
+<li>Note: <strong>yes</strong>, this looks like a lot of reading - but when you remeber that you do not have to do the exercises, this cuts down substantially on the actual page count. Focus specifically on understanding <strong>concepts</strong> (such as “what is a point estimate” and “what is a hypothesis test”) versus trying to worry about memorizing any formulae.</li>
+<li>Other note: you can skip the sections about the Central Limit Theorem unless you’d like to have a deeper technical understanding of some of the stuff we’re going t obe doing.</li>
+</ul></li>
 </ul>
 </div>
-<div id="optional-3" class="section level3 unnumbered">
+<div id="optional-7" class="section level3 unnumbered">
 <h3>Optional</h3>
 <ul>
-<li>Julian Flowers, <a href="https://nhsrcommunity.com/blog/keep-data-tidy-a-plea-to-data-publishers-and-developers/">Keep data tidy: A plea to data publishers and developers</a></li>
+<li>If you’re a little uncomfortable with math (and that’s okay!), some of these YouTube videos could help as refreshers:
+<ul>
+<li><a href="https://www.khanacademy.org/math/ap-statistics/xfb5d8e68:inference-categorical-proportions/introduction-confidence-intervals/v/confidence-intervals-and-margin-of-error">Khan Academy - Point Estimates and Margins of Error</a></li>
+<li><a href="https://www.youtube.com/watch?v=-FtlH4svqx4">Khan Academy - Hypothesis Testing</a></li>
+<li><a href="https://www.youtube.com/watch?v=HOyNEU94xJQ">Khan Academy - <em>p</em>-values and Significance Testing</a></li>
+</ul></li>
 </ul>
 </div>
 </div>
-<div id="important-links-and-files-3" class="section level2 unnumbered">
+<div id="important-links-and-files-7" class="section level2 unnumbered">
 <h2>Important Links and Files</h2>
-<p>The file we worked on in class is available <a href="https://github.com/kylescotshank/applied_data_science/blob/master/Week2_Class2_InClassExamples.R">here</a></p>
+<ul>
+<li>The file we worked on in class is available <a href="">here</a></li>
+</ul>
 
 </div>
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
 </div>
 
 
@@ -246,8 +267,8 @@
           </div>
         </div>
       </div>
-<a href="r-basics-intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="tidying-data---part-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="statistics-central-tendency.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -278,7 +299,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kylescotshank/applied_data_science02_02_TheBasicsPart2.Rmd",
+"link": "https://github.com/kylescotshank/applied_data_science04_02_Statistics_SimpleTests.Rmd",
 "text": "Edit"
 },
 "history": {

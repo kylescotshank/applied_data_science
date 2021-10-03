@@ -5,3 +5,4 @@ r-basics-data-sets
 tidying-data---part-1
 tidying-data---part-2
 statistics-central-tendency
+statistics-statistical-tests
