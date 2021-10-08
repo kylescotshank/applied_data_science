@@ -25,13 +25,40 @@ metal <- read_csv("./data/metal_bands_2017.csv")
 #
 #  Introduction to a t-test!
 #
+# A t-test is a statistic method used to determine if there is a significant difference between the 
+# means of two groups based on a sample of data. Historically, this was used for data where you had a small n. 
+#
+# The test relies on a set of assumptions for it to be interpreted properly and with validity.
+# Among these assumptions, the data must be randomly sampled from the population of interest 
+# and the data variables must follow a normal distribution.
+#
+# A very, *very* important note about that last part - the normal distribution requirement. 
+# 
+# The t-test assumes that the means of the different samples are normally distributed; 
+# it does *not* assume that the population is normally distributed.
+#
+# By the central limit theorem, means of samples from a population with finite variance approach a normal 
+# distribution regardless of the distribution of the population. 
+# Rules of thumb say that the sample means are basically normally distributed as 
+# long as the sample size is at least 20 or 30. For a t-test to be valid on a sample of smaller size, 
+# the population distribution would have to be approximately normal.
+
+# The t-test is invalid for small samples from non-normal distributions, 
+# but it is valid for large samples from non-normal distributions.
 # # ---------------------------------------------------------------
+
 
 # First, let's clean up. 
 
 metal_cleaned <- metal %>%
   select(-split) %>%
   drop_na()
+
+# Let's check some of those assumptions
+
+# Do we have enough data? 
+
+metal_cleaned %>% nrow()
 
 # What are the average number of fans for bands that formed in the Denmark vs. Sweden?
 
@@ -71,18 +98,30 @@ metal_test_example %>%
 
 
 
+
+
 # Do metal bands from Scandinavian countries (Sweden, Denmark, Norway, Finland, The Faroe Islands) have more fans
 # on average than those from North America? Use a 90% confidence threshold. 
 
 
 
 
-
-
 # # ---------------------------------------------------------------
 #
-#  Introduction to a tests of proportions! 
+#  Introduction to a tests of proportions - or the Z-test
 #
+# Two sample Z test of proportions is the test to determine whether the two populations differ 
+# significantly on specific characteristics. In other words, compare the proportion of two 
+# different populations that have some single characteristic. 
+# 
+# More formally the Z-test for proportions is a special case of a generic Z-test.
+# A standard Z-test is a statistical test to determine whether two population means 
+# are different when the variances are known and the sample size is large.
+#
+# Difference between Z-test and t-test: 
+# Z-test is used when sample size is large (n>50), or the population variance is known.
+# t-test is used when sample size is small (n<50) and population variance is unknown. 
+
 # # ---------------------------------------------------------------
 
 # Let's get that NYC party data again...
@@ -113,8 +152,14 @@ prop.test(x = cleaned_party$count, n = cleaned_party$total, correct = FALSE, con
 #
 # # ---------------------------------------------------------------
 
-# Of all the polices calls that happened during November of 2016, was there a  statistically significant difference in
+# Of all the police calls that happened during November of 2016, was there a  statistically significant difference in
 # the proportion of parties that were busted in the boroughts of Brooklyn vs. Manhattan? Use a 99% confidence threshold
+
+
+
+# Was there a statistically significant difference in the proportion of police calls that were against 
+# outdoor venues - streets, sidealks, parks, and playgrounds - than indoor venues for non-Manhattan boroughs? 
+# Use a 90% confidence threhsold. 
 
 
 
