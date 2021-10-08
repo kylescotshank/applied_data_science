@@ -21,4 +21,5 @@
 
 ## Important Links and Files {-}
 
-* The file we worked on in class is available [here]()
+* The file we worked on in class is available [here](https://github.com/kylescotshank/applied_data_science/blob/master/Week4_Class2_InClassExamples.R)
+* You'll need the Metal Bands dataset! It's available [here](https://www.kaggle.com/mrpantherson/metal-by-nation/)
