@@ -20,7 +20,6 @@ library(broom)
 # Some fun data sets today
 metal <- read_csv("./data/metal_bands_2017.csv")
 
-
 # # ---------------------------------------------------------------
 #
 #  Introduction to a t-test!
@@ -52,7 +51,8 @@ metal <- read_csv("./data/metal_bands_2017.csv")
 
 metal_cleaned <- metal %>%
   select(-split) %>%
-  drop_na()
+  drop_na() %>%
+  distinct()
 
 # Let's check some of those assumptions
 
@@ -92,18 +92,51 @@ metal_test_example %>%
 #
 # # ---------------------------------------------------------------
 
-# Are the average number of fans for bands that formed before the 90s DIFFERENT than fans that formed during or after the 90s? Use a 95% confidence threshold. 
+# Are the average number of fans for bands that formed before the 90s DIFFERENT 
+# than fans that formed during or after the 90s? Use a 95% confidence threshold. 
+
+# One way! 
+
+metal_old <- metal_cleaned %>% 
+  filter(formed < 1990) %>%
+  select(band_name, formed, fans) 
+
+metal_new <- metal_cleaned %>% 
+  filter(formed >= 1990) %>%
+  select(band_name, formed, fans)
+
+t.test(metal_old$fans, metal_new$fans)
+
+##### OTHER WAY
 
 
+metal_cleaned %>% 
+  mutate(decade = ifelse(formed < 1990, "Pre-90s", "Post-90s")) %>% 
+  select(decade, fans) %>% 
+  do(tidy(t.test(fans ~ decade, data = ., conf.level = 0.95)))
 
+x <- metal_cleaned %>% 
+  mutate(decade = ifelse(formed < 1990, "Pre-90s", "Post-90s")) %>% 
+  select(decade, fans)
 
+t.test(fans ~ decade, data = x, conf.level = 0.95)
 
+### OTHER WAY
+
+metal_cleaned_90 <- metal_cleaned %>% 
+  filter(formed < 1990) 
 
 
 # Do metal bands from Scandinavian countries (Sweden, Denmark, Norway, Finland, The Faroe Islands) have more fans
 # on average than those from North America? Use a 90% confidence threshold. 
 
 
+metal_cleaned %>% 
+  mutate(country_group = ifelse(origin %in% c("Sweden","Denmark","Norway","Finland","Faroe Islands"), "Scandinaivan", 
+                                ifelse(origin %in% c("USA","Canada"), "North American","Other"))) %>%
+  filter(country_group != "Other") %>% 
+  select(country_group, fans) %>%
+  do(tidy(t.test(fans ~ country_group, data = ., conf.level = 0.90)))
 
 
 # # ---------------------------------------------------------------
