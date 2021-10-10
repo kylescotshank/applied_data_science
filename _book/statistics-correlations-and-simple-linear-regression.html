@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 2 Gettting Started | Applied Data Science I</title>
+  <title>Lesson 9 Statistics!: Correlations and simple linear regression | Applied Data Science I</title>
   <meta name="description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 2 Gettting Started | Applied Data Science I" />
+  <meta property="og:title" content="Lesson 9 Statistics!: Correlations and simple linear regression | Applied Data Science I" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://ads-coa.netlify.app/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="kylescotshank/applied_data_science" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 2 Gettting Started | Applied Data Science I" />
+  <meta name="twitter:title" content="Lesson 9 Statistics!: Correlations and simple linear regression | Applied Data Science I" />
   <meta name="twitter:site" content="@kylescotshank" />
   <meta name="twitter:description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introductions.html"/>
-<link rel="next" href="r-basics-intro.html"/>
+<link rel="prev" href="statistics-statistical-tests.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -283,50 +283,93 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="gettting-started" class="section level1">
-<h1><span class="header-section-number">Lesson 2</span> Gettting Started</h1>
-<div id="goals-for-today-1" class="section level2 unnumbered">
+<div id="statistics-correlations-and-simple-linear-regression" class="section level1">
+<h1><span class="header-section-number">Lesson 9</span> Statistics!: Correlations and simple linear regression</h1>
+<div id="goals-for-today-8" class="section level2 unnumbered">
 <h2>Goals for Today</h2>
 <ul>
-<li>Getting R and RStudio installed and functioning for everybody</li>
-<li>Discussing why we’re using R vs. other programming languages (like Python)</li>
-<li>Some example analyses</li>
+<li>Today we’re going to be talking about correlations and linear regression</li>
 </ul>
 </div>
-<div id="readings-for-today-1" class="section level2 unnumbered">
+<div id="readings-for-today-8" class="section level2 unnumbered">
 <h2>Readings for Today</h2>
-<div id="required-1" class="section level3 unnumbered">
+<div id="required-8" class="section level3 unnumbered">
 <h3>Required</h3>
 <ul>
-<li>Peng, <a href="https://bookdown.org/rdpeng/rprogdatascience/history-and-overview-of-r.html">R Programming for Data Science - Chapter 2, History and Overview of R</a></li>
-<li>OpenIntro to Statistics, Sections 1.1 and 1.2</li>
-<li>Ziemann et al., <a href="https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-016-1044-7.pdf">Gene name errors are widespread in the
-scientific literature</a>, <em>Genome Biology</em> (2016) 17:177
-DOI 10.1186/s13059-016-1044-7</li>
-<li>Alex Hern, <a href="https://www.theguardian.com/politics/2020/oct/05/how-excel-may-have-caused-loss-of-16000-covid-tests-in-england">Covid: how Excel may have caused loss of 16,000 test results in England</a>, <em>Guardian</em>, Oct. 2020</li>
+<li>OpenIntro Statistics, <strong>All of Chapters 8</strong></li>
+<li>DataCamp, <strong><a href="https://www.datacamp.com/community/tutorials/linear-regression-R">Regression in R</a></strong></li>
+<li>Peng, <strong><a href="https://bookdown.org/rdpeng/artofdatascience/using-models-to-explore-your-data.html">Art of Data Science - Chapter 5</a></strong></li>
 </ul>
 </div>
-<div id="optional-1" class="section level3 unnumbered">
+<div id="optional-8" class="section level3 unnumbered">
 <h3>Optional</h3>
 <ul>
-<li>Hugo Bowne-Anderson, <a href="https://hbr.org/2018/08/what-data-scientists-really-do-according-to-35-data-scientists">What Data Scientists Really Do, According to 35 Data Scientists</a>, <em>Harvard Business Review</em>. 15 Aug. 2018</li>
-<li>Knuth, Donald E., <a href="https://dl.acm.org/doi/pdf/10.1145/1283920.1283929">Computer programming as an art</a>, <em>ACM Turing award lectures</em>. 2007.</li>
-<li>Thomas Herndon, Michael Ash and Robert Pollin, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.641.3345&amp;rep=rep1&amp;type=pdf">Does high public debt consistently stifle economic growth? A critique of Reinhart and Rogoff</a>, <em>Cambridge Journal of Economics</em> 2013, 1 of 23 (Sections 1 and 3)</li>
-<li>Cassidy, John, <a href="https://www.newyorker.com/news/john-cassidy/the-reinhart-and-rogoff-controversy-a-summing-up">The Reinhart and Rogoff Controversy: A Summing Up</a>, <em>New Yorker</em>, 2013 (Note: this may be useful background reading for the paper above)</li>
+<li>If you’re a little uncomfortable with math (and that’s okay!), some of these YouTube videos could help as refreshers:
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ROpbdO-gRUo">Khan Academy - Correlation and Causation</a></li>
+<li><a href="https://www.youtube.com/watch?v=GAmzwIkGFgE">Khan Academy - Regression Example</a></li>
+<li><a href="https://www.youtube.com/watch?v=2Sb1Gvo5si8">Linear regression in R - with Examples</a></li>
+</ul></li>
 </ul>
 </div>
 </div>
-<div id="important-links-and-files-1" class="section level2 unnumbered">
+<div id="important-links-and-files-8" class="section level2 unnumbered">
 <h2>Important Links and Files</h2>
 <ul>
-<li><a href="https://www.r-project.org/">R: The R Project for Statistical Computing</a></li>
-<li><a href="https://cran.r-project.org/">The Comprehensive R Archive Network (CRAN)</a></li>
-<li><a href="https://www.rstudio.com/products/rstudio/">R Studio</a></li>
-<li><a href="https://www.youtube.com/watch?v=Ohnk9hcxf9M">Install R on Windows - YouTube Instructions</a></li>
-<li><a href="https://www.youtube.com/watch?v=uxuuWXU-7UQ">Install R on Mac - YouTube Instructions</a></li>
+<li>The file we worked on in class is available <a href="">here</a></li>
 </ul>
+</div>
+<div id="written-assignment-2" class="section level2 unnumbered">
+<h2>Written Assignment #2</h2>
+<div id="details-1" class="section level3 unnumbered">
+<h3>Details</h3>
+<ul>
+<li><strong>Due Date</strong>:
+<ul>
+<li>2021-10-15 (<strong>this Friday!</strong>) prior to the start of class (i.e., needs to be submitted before 1PM EST).</li>
+</ul></li>
+<li><strong>Format</strong>:
+<ul>
+<li>You’ll submit this via Google Classroom. Again, it can be in whatever format you like - so long as it uploads! Take care if you’re trying to use a Google Doc, however, as the copy/paste function of code seems to be a little funky.</li>
+</ul></li>
+<li><strong>Working Style</strong>
+<ul>
+<li>You can do this individually or as a group - it is entirely up to you! If you do work in groups, please make note in the document that you did so and list everyone’s name.</li>
+</ul></li>
+</ul>
+</div>
+<div id="data-1" class="section level3 unnumbered">
+<h3>Data</h3>
+<p>Everyone complains about bad drivers - but which state has the <em>worst</em> bad drivers? Let’s explore that question and see if we can find any interesting relationships.</p>
+<p>The data and data dictionary/context are available <a href="https://github.com/fivethirtyeight/data/tree/master/bad-drivers">here</a>.
+You can download the data directly with these commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="statistics-correlations-and-simple-linear-regression.html#cb1-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="statistics-correlations-and-simple-linear-regression.html#cb1-2"></a>data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/fivethirtyeight/data/master/bad-drivers/bad-drivers.csv&quot;</span>))</span></code></pre></div>
+<p><strong>Note</strong>: for full credit, you <em>must</em> provide the functions you used to obtain your answers!</p>
+</div>
+<div id="questions-1" class="section level3 unnumbered">
+<h3>Questions</h3>
+<p>Answer these as thoroughly as you can and please provide the code that you’ve used to generate your answer.</p>
+<ol style="list-style-type: decimal">
+<li><p>Which state(s) has the <strong>highest</strong> number of drivers involved in fatal collisions per billion miles?</p></li>
+<li><p>What is the state-level average percentage of drivers involved in fatal collisions who were alcohol-impaired? (Note:
+remember which of these data elements are US states and which ones are not!)</p></li>
+<li><p>Identify if a given state is above or below the median car insurance premiums from this data set. Now test, using a two-sided t-test, if the average number of drivers involved in fatal collisions per billion miles is different between these two groups. Use a confidence threshold of 90%. Answer the question by referring back to the hypothesis you’re testing.</p></li>
+<li><p>Compare the average percentage of drivers involved in fatal collisions while speeding between states on the West Coast (including Alaska and Hawaii) to every state on the East Coast (Florida up through Maine) using a t-test. Test if the East Coast drivers have a <em>lower</em> average percentage than West Coast (hint: use a one-sided test!) using a 95% confidence threshold.</p></li>
+<li><p>Is there evidence of a statistically significant correlation between the percentage of drivers involved in fatal collisions who were alcohol impaired and the number of drivers involved in fatal collisions per billion miles? Use a confidence threshold of 90%</p></li>
+<li><p>Examine all of the possible correlations between the numeric variables and reported which variables, if any, are statistically correlated. Make sure you report the correlation coefficient for each pair of variable and that you’re using a confidence threshold of 95% each time.</p></li>
+</ol>
 
 </div>
+</div>
+</div>
+
+
+
+</div>
+
+
+
 </div>
 
 
@@ -337,8 +380,8 @@ DOI 10.1186/s13059-016-1044-7</li>
           </div>
         </div>
       </div>
-<a href="introductions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="r-basics-intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="statistics-statistical-tests.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -369,7 +412,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kylescotshank/applied_data_science01_02_DownloadingAndInstallingR.Rmd",
+"link": "https://github.com/kylescotshank/applied_data_science05_01_CorrelationAndRegression.Rmd",
 "text": "Edit"
 },
 "history": {
