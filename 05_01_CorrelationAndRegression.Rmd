@@ -53,7 +53,7 @@ data <- read_csv(url("https://raw.githubusercontent.com/fivethirtyeight/data/mas
 
 Answer these as thoroughly as you can and please provide the code that you've used to generate your answer. 
 
-1. Which state(s) has the **highest** number of drivers involved in fatal collisions per billion miles? 
+1. Which state(s) has the highest number of drivers involved in fatal collisions per billion miles? 
 
 2. What is the state-level average percentage of drivers involved in fatal collisions who were alcohol-impaired? (Note: 
 remember which of these data elements are US states and which ones are not!)

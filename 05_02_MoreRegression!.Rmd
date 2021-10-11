@@ -1,0 +1,20 @@
+# Statistics!: Even More Regressions! 
+
+## Goals for Today {-} 
+
+* Different kinds of
+
+## Readings for Today {-} 
+
+### Required {-}
+
+* OpenIntro Statistics, **Chapter 9 - 9.1,9.2, 9.4, 9.5**
+* Kuhn and Silge, **[Tidy Modeling With R - Chapter 3](https://www.tmwr.org/base-r.html)**
+
+### Optional {-}
+
+None! 
+
+## Important Links and Files {-}
+
+* The file we worked on in class is available [here]()

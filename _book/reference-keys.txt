@@ -7,3 +7,4 @@ tidying-data---part-2
 statistics-central-tendency
 statistics-statistical-tests
 statistics-correlations-and-simple-linear-regression
+statistics-even-more-regressions
