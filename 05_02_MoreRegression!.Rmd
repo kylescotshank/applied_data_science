@@ -2,7 +2,7 @@
 
 ## Goals for Today {-} 
 
-* Different kinds of
+* We're going to explore multivariate regression, logistic regression, and poisson regressoin! 
 
 ## Readings for Today {-} 
 
