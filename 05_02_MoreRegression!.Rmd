@@ -2,7 +2,7 @@
 
 ## Goals for Today {-} 
 
-* We're going to explore multivariate regression, logistic regression, and poisson regressoin! 
+* We're going to explore multivariate regression and logistic regression! 
 
 ## Readings for Today {-} 
 
@@ -17,4 +17,4 @@ None!
 
 ## Important Links and Files {-}
 
-* The file we worked on in class is available [here]()
+* The file we worked on in class is available [here](https://github.com/kylescotshank/applied_data_science/blob/master/Week5_Class2_InClassExamples.R)
