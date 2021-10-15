@@ -101,7 +101,26 @@ error_1 <- mean(predict_sex_survived != titanic_test$survived)
 accuracy_1 <- 1-error_1
 accuracy_1
 
-#78% accuracy, not bad! 
+#78% accuracy, not bad
+
+
+# If you want more fancy information without having to do it manually like the above: 
+
+library(caret)
+
+fitted.results.cat<-as.factor(predict_sex_survived)
+titanic_test <- titanic_test %>% 
+  mutate(survived = as.factor(survived))
+
+confusionMatrix(data=fitted.results.cat, 
+                    reference=titanic_test$survived)
+
+# Sensitivity = "Recall" = True Positive Rate
+# Specificity = "Selectivity" = True Negative Rate 
+# Positive Predictive Value = "Precision" 
+# Negative Predictive Value 
+# Prevalence = Proportion of the population affected 
+# Detection Rate 
 
 # Your turn! 
 
