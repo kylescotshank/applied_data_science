@@ -8,3 +8,5 @@ statistics-central-tendency
 statistics-statistical-tests
 statistics-correlations-and-simple-linear-regression
 statistics-even-more-regressions
+data-visualization-theory
+data-visualization-basics

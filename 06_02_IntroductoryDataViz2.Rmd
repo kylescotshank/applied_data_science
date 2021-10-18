@@ -1,0 +1,57 @@
+# Data Visualization Basics
+
+## Goals for Today {-} 
+
+* We're going to build simple graphical visualizations within R
+
+## Readings for Today {-} 
+
+### Required {-}
+
+* Grolemund and Wickham, [R for Data Science - Chapter 3, Data Visualizations](https://r4ds.had.co.nz/data-visualisation.html)
+  * I want you to work and follow along with the code *while reading this chapter*. It will make much more sense if you do. Pay attention to *how the functions* generate iterative plot elements (i.e., what does `ggplot()` do vs. `geom_point()`). 
+* *Towards Data Science*, [A Comprehensive Guide to the Grammar of Graphics for Effective Visualization of Multi-dimensional Data](https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149) 
+  * This is good supplemental reading to the above chapters. 
+
+
+### Optional {-}
+
+* [ggplot for plots and graphs. An introduction to data visualization using R programming](https://www.youtube.com/watch?v=HPJn1CMvtmI) (YouTube)
+* [How to use ggplot2 in R | A Beginner's RStudio Tutorial](https://www.youtube.com/watch?v=TgyWeKoK1HA)
+
+## Important Links and Files {-}
+
+* The file we worked on in class is available [here]()
+
+## Information about the Final Project {-}
+
+We're just now beginning Week 6, so it's time to start focusing on your final project! 
+
+### The Basics {-}
+
+* **Due Date for Written Component**: 2021-11-12
+* **In-Class Presentations**: 2021-11-16
+* **Course Grade Weight**: 40% 
+
+### Guidelines and Expectations {-}
+
+* The written component is expected to contain the following: 
+  * A description of a dataset and a data-driven examination of its properties. 
+  * Some form of a hypothesis or question you'd like to investigate with the data. 
+  * Statistical tests - both assumptions, outputs, and interpretations - that either confirm or fail to confirm this hypothesis. 
+  * Appropriate visualizations to support your claims or investigations. 
+  * Context and interpretation. 
+* The in-class presentation is expected to be a distilled, simplified version of your written component that focuses much more on cleanly presenting your findings vs. exhaustively defending your arguments/hypotheses. 
+* There is no hard requirement on length. That said, I want the analysis to be sufficiently complex and thorough. You should expect to have the write-up be between **5-10 pages in length**. The presentation should be somewhere around **10 minutes in length** and contain visualizations you'll present/share with the class. 
+
+### Interesting Data Sets{-}
+
+You can choose any data set and question that you like. If you need some ideas, check out these links below. Note: **remember the rules about plagiarism**. Do not pass off others' work as your own. It's bad. 
+
+* [Kaggle Machine Learning Competition Datasets](https://www.kaggle.com/datasets)
+* [Piktochart](https://piktochart.com/blog/100-data-sets/) 
+* [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
+* [data.world](https://data.world/) 
+* [US Census Data](https://data.census.gov/cedsci/) 
+* [Tableau Public Datasets](https://www.tableau.com/learn/articles/free-public-data-sets)
+

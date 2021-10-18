@@ -1,0 +1,19 @@
+# Data Visualization Theory
+
+## Goals for Today {-} 
+
+* We're going to talk *all about* Data Visualization! 
+
+## Readings for Today {-} 
+
+### Required {-}
+
+None! 
+
+### Optional {-}
+
+None! 
+
+## Important Links and Files {-}
+
+* The presentation slides discussed in class are available [here]()
