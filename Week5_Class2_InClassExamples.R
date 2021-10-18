@@ -37,7 +37,13 @@ medium_model <-lm(log(price) ~ log(carat) + cut, data = diamonds)
 summary(medium_model)
 
 
-anova(simple_model, medium_model, test = "Chisq")
+complex_model <- lm(log(price) ~ log(carat) + ., data = diamonds)
+summary(complex_model)
+
+
+anova(simple_model, medium_model)
+
+anova(simple_model, complex_model)
 
 # Your turn! 
 #
@@ -71,7 +77,11 @@ smp_size <- floor(0.75 * nrow(titanic_cleaned))
 
 ## set the seed to make your partition reproducible
 set.seed(123)
+
+# This builds an index of your data set, titanic_cleaned, where it randomly 
+# pulls row numbers equal in length to the sample size you calculated above 
 train_ind <- sample(seq_len(nrow(titanic_cleaned)), size = smp_size)
+
 
 titanic_train <- titanic_cleaned[train_ind, ]
 titanic_test <- titanic_cleaned[-train_ind, ]
@@ -79,13 +89,14 @@ titanic_test <- titanic_cleaned[-train_ind, ]
 # Let's build a toy model that tries to model the probability of survival
 # based SOLELY upon sex (as classified by the norms of the time) 
 
-titan_glm_simple <- glm(survived ~ sex, data = titanic_train, family = 'binomial')
+titan_glm_simple <- glm(survived ~ sex + age, data = titanic_train, family = 'binomial')
+
 summary(titan_glm_simple)
 
 # What does this say? This says that the probability of surviving the sinking of the Titanic
-# given you were male was log(p / (1-p)) = 0.9243 - 2.4109*(Male) 
+# given you were male was log(p / (1-p)) = 0.9474 - 2.2970*(Male) 
 #
-# therefore, p = 1 / (1 + exp(0.9243-2.4109(1))) = 0.815 (or 82%)
+# therefore, p = 1 / (1 + exp(0.9243-2.4109(1))) = 0.79 (or 79%)
 # 
 # which means the probability of surviving given you were FEMALE is 
 # p = 1 / (1 + exp(1.0566 - 2.5137(0))) = 0.248 (or 28%) 
@@ -106,6 +117,7 @@ accuracy_1
 
 # If you want more fancy information without having to do it manually like the above: 
 
+install.packages("caret")
 library(caret)
 
 fitted.results.cat<-as.factor(predict_sex_survived)
