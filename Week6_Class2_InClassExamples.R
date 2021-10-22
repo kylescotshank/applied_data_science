@@ -29,7 +29,7 @@ midwest
 # # 
 # # ---------------------------------------------------------------
 
-# What happens if we just initialize a plot of the area and population totals of midwesternc ounties
+# What happens if we just initialize a plot of the area and population totals of midwestern counties
 
 ggplot(midwest, aes(x = area, y = poptotal))
 
@@ -43,11 +43,23 @@ midwest %>%
   ggplot(aes(x = area, y = poptotal)) + 
   geom_point()
 
+midwest %>% 
+  ggplot(aes(x = area, y = poptotal, color = state)) + 
+  geom_point()
+
+midwest %>% 
+  ggplot(aes(x = area, y = poptotal, color = state)) + 
+  geom_point(aes(shape = state))
 
 # Let's try adding in a nice linear model! 
 
 midwest %>% 
   ggplot(aes(x = area, y = poptotal)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+
+midwest %>% 
+  ggplot(aes(x = area, y = poptotal, color = state)) + 
   geom_point() + 
   geom_smooth(method = "lm")
 
@@ -85,6 +97,9 @@ midwest %>%
   coord_cartesian(xlim=c(0, 0.1), ylim=c(0, 1000000)) + 
   labs(title="Area Vs Population", subtitle="From midwest dataset", y="Population", x="Area", caption="Midwest Demographics")
 
+
+
+
 # What if we weant to use some special "themes" on this plot? 
 
 midwest %>% 
@@ -93,7 +108,8 @@ midwest %>%
   geom_smooth(method="lm", col="firebrick", size=2) + 
   coord_cartesian(xlim=c(0, 0.1), ylim=c(0, 1000000)) + 
   labs(title="Area Vs Population", subtitle="From midwest dataset", y="Population", x="Area", caption="Midwest Demographics") + 
-  theme_bw() + labs(subtitle="BW Theme")
+  theme_bw() + 
+  labs(subtitle="BW Theme")
 
 midwest %>% 
   ggplot(aes(x=area, y=poptotal)) + 
@@ -101,23 +117,46 @@ midwest %>%
   geom_smooth(method="lm", col="firebrick", size=2) + 
   coord_cartesian(xlim=c(0, 0.1), ylim=c(0, 1000000)) + 
   labs(title="Area Vs Population", subtitle="From midwest dataset", y="Population", x="Area", caption="Midwest Demographics") + 
-  theme_classic() + labs(subtitle="Classic Theme")
+  theme_classic() + 
+  labs(subtitle="Classic Theme")
+
+midwest %>% 
+  ggplot(aes(x=area, y=poptotal)) + 
+  geom_point(aes(col=state), size=3) +  # Set color to vary based on state categories.
+  geom_smooth(method="lm", col="firebrick", size=2) + 
+  coord_cartesian(xlim=c(0, 0.1), ylim=c(0, 1000000)) + 
+  labs(title="Area Vs Population", subtitle="From midwest dataset", y="Population", x="Area", caption="Midwest Demographics") + 
+  theme_dark() + 
+  labs(subtitle="Dark Theme")
+
 
 # ------------
 # YOUR TURN 
 # -------------
 
-# Make a chart that shows the county-level percentage of adult poverty on the x-axis 
+# Make a plot that shows the county-level percentage of adult poverty on the x-axis 
 # and the percentage of adults with college degrees on the y-axis. Color each point by the state. 
 
+midwest %>% 
+  ggplot(aes(x = percadultpoverty, y = percollege, color = state)) + 
+  geom_point() + 
+  theme_bw()
 
-
-# Make a chart that shows the county-level percentage of adult poverty on the x-axis 
+# Make a plot that shows the county-level percentage of adult poverty on the x-axis 
 # and the percentage of adults with college degrees on the y-axis. This time, color each point by
 # whether or not it's a metro-area county. Before you do this, transform the inmetro variable into
 # a factor
 
+midwest %>% 
+  ggplot(aes(x = percadultpoverty, y = percollege, color = inmetro)) + 
+  geom_point() + 
+  theme_bw()
 
+midwest %>% 
+  mutate(inmetro = as.factor(inmetro)) %>% 
+  ggplot(aes(x = poptotal, y = percollege, color = inmetro)) + 
+  geom_point() + 
+  theme_bw()
 
 # # ---------------------------------------------------------------
 # # 
@@ -132,7 +171,7 @@ diamonds
 # Let's plot a bar chart! 
 diamonds %>% 
   ggplot() + 
-  geom_bar(mapping = aes(x = cut)) + 
+  geom_bar(aes(x = cut)) + 
   theme_bw()
 
 # Let's plot a bar chart with DIFFERENT COLORS for different parts of the overall count! 
@@ -159,18 +198,32 @@ diamonds %>%
   geom_bar(aes(x = cut, y = pricesum), stat = "identity") + 
   theme_bw()
 
+
 # ------------
 # YOUR TURN 
 # -------------
 
 # Make a bar chart that shows the MEDIAN carat by cut.
 
+diamonds %>% 
+  group_by(cut) %>% 
+  summarize(median_carat = median(carat)) %>% 
+  ggplot() + 
+  geom_bar(aes(x = cut, y = median_carat), stat = "identity") + 
+  theme_bw()
 
 
 # Make a facet wrap bar chart that shows the median carat by clarity, where each facet is the cut. 
 # If you forget how to do that from the reading, check out ?facet_wrap 
 
 
+diamonds %>% 
+  group_by(cut, clarity) %>% 
+  summarize(median_carat = median(carat)) %>% 
+  ggplot() + 
+  geom_bar(aes(x = clarity, y = median_carat, fill = cut), stat = "identity") + 
+  facet_wrap(~cut) + 
+  theme_bw()
 
 
 # Make a facet GRID scatter plot chart that shows carat on the x-axis and the 
@@ -178,3 +231,9 @@ diamonds %>%
 # all have the same color based upon their color.   
 
 
+diamonds %>% 
+  ggplot(aes(x = carat, y = price, color = color)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") + 
+  facet_grid(color~cut) + 
+  theme_bw()
