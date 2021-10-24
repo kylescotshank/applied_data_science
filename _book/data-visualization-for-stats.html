@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 11 Data Visualization Theory | Applied Data Science I</title>
+  <title>Lesson 13 Data Visualization for Stats! | Applied Data Science I</title>
   <meta name="description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 11 Data Visualization Theory | Applied Data Science I" />
+  <meta property="og:title" content="Lesson 13 Data Visualization for Stats! | Applied Data Science I" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://ads-coa.netlify.app/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="kylescotshank/applied_data_science" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 11 Data Visualization Theory | Applied Data Science I" />
+  <meta name="twitter:title" content="Lesson 13 Data Visualization for Stats! | Applied Data Science I" />
   <meta name="twitter:site" content="@kylescotshank" />
   <meta name="twitter:description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="statistics-even-more-regressions.html"/>
-<link rel="next" href="data-visualization-basics.html"/>
+<link rel="prev" href="data-visualization-basics.html"/>
+<link rel="next" href="data-visualization-practice.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -333,31 +333,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-visualization-theory" class="section level1">
-<h1><span class="header-section-number">Lesson 11</span> Data Visualization Theory</h1>
-<div id="goals-for-today-10" class="section level2 unnumbered">
+<div id="data-visualization-for-stats" class="section level1">
+<h1><span class="header-section-number">Lesson 13</span> Data Visualization for Stats!</h1>
+<div id="goals-for-today-12" class="section level2 unnumbered">
 <h2>Goals for Today</h2>
 <ul>
-<li>We’re going to talk <em>all about</em> Data Visualization!</li>
+<li>More plots: plotting lines over time, boxplots, and keeping these plots cleaned!</li>
 </ul>
 </div>
-<div id="readings-for-today-10" class="section level2 unnumbered">
+<div id="readings-for-today-12" class="section level2 unnumbered">
 <h2>Readings for Today</h2>
-<div id="required-10" class="section level3 unnumbered">
+<p>None!</p>
+<div id="required-12" class="section level3 unnumbered">
 <h3>Required</h3>
 <p>None!</p>
 </div>
-<div id="optional-10" class="section level3 unnumbered">
+<div id="optional-12" class="section level3 unnumbered">
 <h3>Optional</h3>
 <p>None!</p>
 </div>
 </div>
-<div id="important-links-and-files-10" class="section level2 unnumbered">
+<div id="important-links-and-files-12" class="section level2 unnumbered">
 <h2>Important Links and Files</h2>
 <ul>
-<li>The presentation slides discussed in class are available <a href="https://docs.google.com/presentation/d/1aKAxmNBBGOmIOY7EgbVHrhqsKdant18MzbIlWqtJmnc/edit#slide=id.gf935e25286_0_593">here</a></li>
+<li>The file we worked on in class is available <a href="">here</a></li>
 </ul>
+</div>
+<div id="written-assignment-3" class="section level2 unnumbered">
+<h2>Written Assignment #3</h2>
+<div id="details-2" class="section level3 unnumbered">
+<h3>Details</h3>
+<ul>
+<li><strong>Due Date</strong>:
+<ul>
+<li>2021-10-29 (<strong>this Friday!</strong>) prior to the start of class (i.e., needs to be submitted before 1PM EST).</li>
+</ul></li>
+<li><strong>Format</strong>:
+<ul>
+<li>You’ll submit this via Google Classroom. Again, it can be in whatever format you like - so long as it uploads! Take care if you’re trying to use a Google Doc, however, as the copy/paste function of code seems to be a little funky.</li>
+</ul></li>
+<li><strong>Working Style</strong>
+<ul>
+<li>You can do this individually or as a group - it is entirely up to you! If you do work in groups, please make note in the document that you did so and list everyone’s name.</li>
+</ul></li>
+</ul>
+</div>
+<div id="data-2" class="section level3 unnumbered">
+<h3>Data</h3>
+<p>In the spirit of the holiday - we’re going to examine some <em>halloween candy</em> data!</p>
+<p>The data is available <a href="https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/data/candy-data.csv">here</a>. You can gather more information about the data set <a href="https://www.kaggle.com/fivethirtyeight/the-ultimate-halloween-candy-power-ranking/version/1">here</a>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="data-visualization-for-stats.html#cb2-1"></a>candy &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/data/candy-data.csv&quot;</span>))</span></code></pre></div>
+<p><strong>Note</strong>: for full credit, you <em>must</em> provide the functions you used to obtain your answers!</p>
+</div>
+<div id="questions-2" class="section level3 unnumbered">
+<h3>Questions</h3>
+<p>Answer these as thoroughly as you can and please provide the code that you’ve used to generate your answer.</p>
+<ol style="list-style-type: decimal">
+<li><p>Generate a facet grid of bar plots showing the distribution of each variable. Your output should show a grid of bar plots where you get a bar for TRUE and FALSE counts of each variable. <strong>Note: this will be much, much easier if you remember how to use the <code>pivot_longer</code> command)</strong></p></li>
+<li><p>Generate a plot where you show <code>competitorname</code> of each candy bar and that candy bars value for <code>pricepercent</code>. Make sure that this plot has <code>competitorname</code> on the y-axis and the <code>pricepercent</code> on the x-axis. Order the chart so that the values go from largest to smallest (top to bottom). <strong>Note: you’ll need to use coord_flip(). Make sure you look up that function with <code>?coord_flip</code> if you forget how it works.</strong></p></li>
+<li><p>Run a t-test that compares the average of <code>sugarpercent</code> between candy bars that are chocolate versus those that are not. Report the results and interpret your findings. Visualize the differences between these groups with a boxplot.</p></li>
+<li><p>Create a scatterplot showing the variable <code>sugarpercent</code> on the x-axis and <code>winpercent</code> on the y-axis. Color the points based on whether or not the candybar is fruity or chocolate. Add linear regressions that show the different relationships for chocolate and fruity candybar types.</p></li>
+</ol>
 
+</div>
 </div>
 </div>
             </section>
@@ -365,8 +403,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="statistics-even-more-regressions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data-visualization-basics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-visualization-basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-visualization-practice.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -397,7 +435,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kylescotshank/applied_data_science06_01_IntroductoryDataViz.Rmd",
+"link": "https://github.com/kylescotshank/applied_data_science07_01_StatisticalDataViz.Rmd",
 "text": "Edit"
 },
 "history": {

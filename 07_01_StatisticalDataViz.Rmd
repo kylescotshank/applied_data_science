@@ -1,10 +1,12 @@
-# Data Visualization Theory
+# Data Visualization for Stats! 
 
 ## Goals for Today {-} 
 
-* We're going to talk *all about* Data Visualization! 
+* More plots: plotting lines over time, boxplots, and keeping these plots cleaned! 
 
 ## Readings for Today {-} 
+
+None! 
 
 ### Required {-}
 
@@ -16,4 +18,41 @@ None!
 
 ## Important Links and Files {-}
 
-* The presentation slides discussed in class are available [here](https://docs.google.com/presentation/d/1aKAxmNBBGOmIOY7EgbVHrhqsKdant18MzbIlWqtJmnc/edit#slide=id.gf935e25286_0_593)
+* The file we worked on in class is available [here]()
+
+
+## Written Assignment #3 {-}
+
+### Details {-}
+
+* **Due Date**: 
+  * 2021-10-29 (**this Friday!**) prior to the start of class (i.e., needs to be submitted before 1PM EST). 
+* **Format**: 
+  * You'll submit this via Google Classroom. Again, it can be in whatever format you like - so long as it uploads! Take care if you're trying to use a Google Doc, however, as the copy/paste function of code seems to be a little funky.
+* **Working Style**
+  * You can do this individually or as a group - it is entirely up to you! If you do work in groups, please make note in the document that you did so and list everyone's name. 
+
+### Data {-}
+
+In the spirit of the holiday - we're going to examine some *halloween candy* data! 
+
+The data is available [here](https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/data/candy-data.csv). You can gather more information about the data set [here](https://www.kaggle.com/fivethirtyeight/the-ultimate-halloween-candy-power-ranking/version/1). 
+
+```{r, eval=FALSE}
+candy <- read_csv(url("https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/data/candy-data.csv"))
+```
+
+**Note**: for full credit, you *must* provide the functions you used to obtain your answers! 
+
+
+### Questions {-} 
+
+Answer these as thoroughly as you can and please provide the code that you've used to generate your answer. 
+
+1. Generate a facet grid of bar plots showing the distribution of each variable. Your output should show a grid of bar plots where you get a bar for TRUE and FALSE counts of each variable. **Note: this will be much, much easier if you remember how to use the `pivot_longer` command)**
+
+2. Generate a plot where you show `competitorname` of each candy bar and that candy bars value for `pricepercent`. Make sure that this plot has `competitorname` on the y-axis and the `pricepercent` on the x-axis. Order the chart so that the values go from largest to smallest (top to bottom). **Note: you'll need to use coord_flip(). Make sure you look up that function with `?coord_flip` if you forget how it works.** 
+
+3.  Run a t-test that compares the average of `sugarpercent` between candy bars that are chocolate versus those that are not. Report the results and interpret your findings. Visualize the differences between these groups with a boxplot. 
+
+4. Create a scatterplot showing the variable `sugarpercent` on the x-axis and `winpercent` on the y-axis. Color the points based on whether or not the candybar is fruity or chocolate. Add linear regressions that show the different relationships for chocolate and fruity candybar types. 
