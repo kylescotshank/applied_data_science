@@ -2,7 +2,7 @@
 
 ## Goals for Today {-} 
 
-* More plots: plotting lines over time, boxplots, and keeping these plots cleaned! 
+* More plots: plotting lines, making box plots, and puttings things in the order that you like. 
 
 ## Readings for Today {-} 
 
@@ -36,9 +36,10 @@ None!
 
 In the spirit of the holiday - we're going to examine some *halloween candy* data! 
 
-The data is available [here](https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/data/candy-data.csv). You can gather more information about the data set [here](https://www.kaggle.com/fivethirtyeight/the-ultimate-halloween-candy-power-ranking/version/1). 
+The data is available [here](https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/data/candy-data.csv). You can gather more information about the data set [here](https://www.kaggle.com/fivethirtyeight/the-ultimate-halloween-candy-power-ranking/version/1). You can use the code below to download the data. 
 
 ```{r, eval=FALSE}
+library(tidyverse)
 candy <- read_csv(url("https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/data/candy-data.csv"))
 ```
 
@@ -49,10 +50,12 @@ candy <- read_csv(url("https://raw.githubusercontent.com/kylescotshank/applied_d
 
 Answer these as thoroughly as you can and please provide the code that you've used to generate your answer. 
 
-1. Generate a facet grid of bar plots showing the distribution of each variable. Your output should show a grid of bar plots where you get a bar for TRUE and FALSE counts of each variable. **Note: this will be much, much easier if you remember how to use the `pivot_longer` command)**
+1. Generate a facet grid of bar plots showing the distribution of each variable. Your output should show a grid of bar plots where you get a bar for TRUE and FALSE counts of each variable. **Note: this will be much, much easier if you remember to use the `pivot_longer` command)**. Provide a written interpretation of your visualization.
 
-2. Generate a plot where you show `competitorname` of each candy bar and that candy bars value for `pricepercent`. Make sure that this plot has `competitorname` on the y-axis and the `pricepercent` on the x-axis. Order the chart so that the values go from largest to smallest (top to bottom). **Note: you'll need to use coord_flip(). Make sure you look up that function with `?coord_flip` if you forget how it works.** 
+2. Generate a plot where you show `competitorname` of each candy bar and that candy bars value for `pricepercent`. Make sure that this plot has `competitorname` on the **y-axis** and the `pricepercent` on the **x-axis**. Order the chart so that the values go from largest to smallest (top to bottom). **Note: you'll need to use coord_flip() to do this! Make sure you look up that function with `?coord_flip` to see how it works works. You'll also need to reorder the bars - to do this, use the `reorder()` function. Use `?reorder` to see how it works**.
 
 3.  Run a t-test that compares the average of `sugarpercent` between candy bars that are chocolate versus those that are not. Report the results and interpret your findings. Visualize the differences between these groups with a boxplot. 
 
-4. Create a scatterplot showing the variable `sugarpercent` on the x-axis and `winpercent` on the y-axis. Color the points based on whether or not the candybar is fruity or chocolate. Add linear regressions that show the different relationships for chocolate and fruity candybar types. 
+4. Create a scatterplot showing the variable `sugarpercent` on the x-axis and `winpercent` on the y-axis. Color the points based on whether or not the candybar is fruity or chocolate. Add linear regressions that show the different relationships for chocolate and fruity candybar types. Provide a written interpretation of your visualization.
+
+5. Run a regression with `winpercent` as the dependent variable and everything else as independent variables. Print the `summary()` of the output of this model. Plot all of the coefficients of this model as a bar chart from largest to smallest. Color the bars based on whether or not the coefficients are positive or negative. **Hint: you'll want to use the `tidy()` function to easily get the coefficients out of your summary to plot them!**. Provide a written interpretation of your visualization.

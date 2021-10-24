@@ -24,7 +24,7 @@
 <meta name="author" content="Kyle Scot Shank" />
 
 
-<meta name="date" content="2021-10-23" />
+<meta name="date" content="2021-10-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -313,6 +313,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="data-visualization-practice.html"><a href="data-visualization-practice.html#important-links-and-files-13"><i class="fa fa-check"></i>Important Links and Files</a></li>
 </ul></li>
 <li class="part"><span><b>VIII Exploratory Data Analysis</b></span></li>
+<li class="part"><span><b>IX Workflows</b></span></li>
+<li class="part"><span><b>X Wrapping Up</b></span></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -338,7 +340,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="goals-for-today-12" class="section level2 unnumbered">
 <h2>Goals for Today</h2>
 <ul>
-<li>More plots: plotting lines over time, boxplots, and keeping these plots cleaned!</li>
+<li>More plots: plotting lines, making box plots, and puttings things in the order that you like.</li>
 </ul>
 </div>
 <div id="readings-for-today-12" class="section level2 unnumbered">
@@ -381,18 +383,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="data-2" class="section level3 unnumbered">
 <h3>Data</h3>
 <p>In the spirit of the holiday - we’re going to examine some <em>halloween candy</em> data!</p>
-<p>The data is available <a href="https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/data/candy-data.csv">here</a>. You can gather more information about the data set <a href="https://www.kaggle.com/fivethirtyeight/the-ultimate-halloween-candy-power-ranking/version/1">here</a>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="data-visualization-for-stats.html#cb2-1"></a>candy &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/data/candy-data.csv&quot;</span>))</span></code></pre></div>
+<p>The data is available <a href="https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/data/candy-data.csv">here</a>. You can gather more information about the data set <a href="https://www.kaggle.com/fivethirtyeight/the-ultimate-halloween-candy-power-ranking/version/1">here</a>. You can use the code below to download the data.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="data-visualization-for-stats.html#cb2-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="data-visualization-for-stats.html#cb2-2"></a>candy &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/kylescotshank/applied_data_science/master/data/candy-data.csv&quot;</span>))</span></code></pre></div>
 <p><strong>Note</strong>: for full credit, you <em>must</em> provide the functions you used to obtain your answers!</p>
 </div>
 <div id="questions-2" class="section level3 unnumbered">
 <h3>Questions</h3>
 <p>Answer these as thoroughly as you can and please provide the code that you’ve used to generate your answer.</p>
 <ol style="list-style-type: decimal">
-<li><p>Generate a facet grid of bar plots showing the distribution of each variable. Your output should show a grid of bar plots where you get a bar for TRUE and FALSE counts of each variable. <strong>Note: this will be much, much easier if you remember how to use the <code>pivot_longer</code> command)</strong></p></li>
-<li><p>Generate a plot where you show <code>competitorname</code> of each candy bar and that candy bars value for <code>pricepercent</code>. Make sure that this plot has <code>competitorname</code> on the y-axis and the <code>pricepercent</code> on the x-axis. Order the chart so that the values go from largest to smallest (top to bottom). <strong>Note: you’ll need to use coord_flip(). Make sure you look up that function with <code>?coord_flip</code> if you forget how it works.</strong></p></li>
+<li><p>Generate a facet grid of bar plots showing the distribution of each variable. Your output should show a grid of bar plots where you get a bar for TRUE and FALSE counts of each variable. <strong>Note: this will be much, much easier if you remember to use the <code>pivot_longer</code> command)</strong>. Provide a written interpretation of your visualization.</p></li>
+<li><p>Generate a plot where you show <code>competitorname</code> of each candy bar and that candy bars value for <code>pricepercent</code>. Make sure that this plot has <code>competitorname</code> on the <strong>y-axis</strong> and the <code>pricepercent</code> on the <strong>x-axis</strong>. Order the chart so that the values go from largest to smallest (top to bottom). <strong>Note: you’ll need to use coord_flip() to do this! Make sure you look up that function with <code>?coord_flip</code> to see how it works works. You’ll also need to reorder the bars - to do this, use the <code>reorder()</code> function. Use <code>?reorder</code> to see how it works</strong>.</p></li>
 <li><p>Run a t-test that compares the average of <code>sugarpercent</code> between candy bars that are chocolate versus those that are not. Report the results and interpret your findings. Visualize the differences between these groups with a boxplot.</p></li>
-<li><p>Create a scatterplot showing the variable <code>sugarpercent</code> on the x-axis and <code>winpercent</code> on the y-axis. Color the points based on whether or not the candybar is fruity or chocolate. Add linear regressions that show the different relationships for chocolate and fruity candybar types.</p></li>
+<li><p>Create a scatterplot showing the variable <code>sugarpercent</code> on the x-axis and <code>winpercent</code> on the y-axis. Color the points based on whether or not the candybar is fruity or chocolate. Add linear regressions that show the different relationships for chocolate and fruity candybar types. Provide a written interpretation of your visualization.</p></li>
+<li><p>Run a regression with <code>winpercent</code> as the dependent variable and everything else as independent variables. Print the <code>summary()</code> of the output of this model. Plot all of the coefficients of this model as a bar chart from largest to smallest. Color the bars based on whether or not the coefficients are positive or negative. <strong>Hint: you’ll want to use the <code>tidy()</code> function to easily get the coefficients out of your summary to plot them!</strong>. Provide a written interpretation of your visualization.</p></li>
 </ol>
 
 </div>
