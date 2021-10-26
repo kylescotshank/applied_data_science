@@ -154,7 +154,38 @@ FANG %>%
 # Make each of these boxplots a different color and have
 # inclusion on the legend. Do not add the jitter points. 
 
+# # ---------------------------------------------------------------
+# # 
+# # Putting it all together and ordering it around! 
+# # 
+# # ---------------------------------------------------------------
+
+# Let's combine that FANG and TSLA data ... 
+
+tech <- FANG %>% 
+  rbind(TSLA)
 
 
+tech %>% 
+  ggplot(aes(x = symbol, y = close)) + 
+  geom_jitter(alpha = 0.2) + 
+  geom_boxplot(fill = NA, color = "red") + 
+  theme_bw()
 
+# What if we wanted to reorder them? 
+
+tech %>%
+  ggplot(aes(x = reorder(symbol, close), y = close)) + 
+  geom_jitter(alpha = 0.2) + 
+  geom_boxplot(fill = NA, color = "red") + 
+  theme_bw()
+
+# What if we wanted to flip the axis? 
+
+tech %>%
+  ggplot(aes(x = reorder(symbol, close), y = close)) + 
+  geom_jitter(alpha = 0.2) + 
+  geom_boxplot(fill = NA, color = "red") + 
+  coord_flip() + 
+  theme_bw() 
 
