@@ -58,6 +58,20 @@ TSLA %>%
   geom_point() + 
   theme_bw()
 
+# The order in which you add these matters
+
+TSLA %>% 
+  ggplot(aes(x = date, y = close)) + 
+  geom_line(color = "black") + 
+  geom_point(color = "red") + 
+  theme_bw()
+
+TSLA %>% 
+  ggplot(aes(x = date, y = close)) + 
+  geom_point(color = "red") + 
+  geom_line(color = "black") + 
+  theme_bw()
+
 # Hmmm...what about adding a trend line? 
 
 TSLA %>% 
@@ -98,6 +112,13 @@ TSLA %>%
 # the date on the x-axis and the closing value on the y-axis. Make this line black. 
 # Add both a LOESS smooth that is BLUE and a 7 day rolling average that is RED to your chart. 
 
+MRNA %>% 
+  mutate(avg_7_day = rollmean(close, 7, align='right', fill=NA)) %>%
+  ggplot() + 
+  geom_line(aes(x = date, y = close), color = "black") + 
+  geom_smooth(aes(x = date, y = close), color = "blue") + 
+  geom_line(aes(x = date, y = avg_7_day), color = "red") + 
+  theme_bw()
 
 # Recreate the above chart - but have a legend that shows what each color means. 
 # HINT: think about this first and remember how we showed legends in the past and what is DIFFERENT about the ways we plotted
@@ -134,7 +155,8 @@ FANG
 
 FANG %>% 
   ggplot(aes(x = symbol, y = close)) + 
-  geom_jitter(alpha = 0.2) + 
+  #geom_jitter(alpha = 0.2, fill = NA) + 
+  geom_violin(fill = NA, color = "purple") + 
   geom_boxplot(fill = NA, color = "red") + 
   theme_bw()
 
@@ -148,11 +170,30 @@ FANG %>%
 # that shows a summary of their closing data from 2021-01-01 to 2021-10-25. 
 # If you can't access the internet, use the "four_companies.csv" file. 
 
+four_companies <- tq_get(c("IXUS","ATVI","MARA","NIO"), get = "stock.prices",
+                        from = "2021-01-01", to = "2021-10-25")
 
+four_companies %>%
+  ggplot(aes(x = symbol, y = close)) + 
+  geom_jitter(alpha = 0.2, fill = NA) + 
+  geom_boxplot(fill = NA, color = "red") + 
+  theme_bw()
 
 # Repeat the above - but this time ALSO visualize the open, high, and close. 
 # Make each of these boxplots a different color and have
 # inclusion on the legend. Do not add the jitter points. 
+
+four_companies %>% 
+  select(-c(volume,adjusted)) %>% 
+  pivot_longer(!symbol:date, names_to = "key", values_to = "value") %>%
+  ggplot(aes(x = symbol, y = value, color = key)) + 
+  geom_boxplot() + 
+  theme_bw()
+
+four_companies %>% 
+  ggplot() + 
+  geom_boxplot(aes(x = symbol, y = open), color = "black") + 
+  geom_boxplot(aes(x = symbol, y = close), color = "red")
 
 # # ---------------------------------------------------------------
 # # 
@@ -175,7 +216,7 @@ tech %>%
 # What if we wanted to reorder them? 
 
 tech %>%
-  ggplot(aes(x = reorder(symbol, close), y = close)) + 
+  ggplot(aes(x = reorder(symbol, desc(close)), y = close)) + 
   geom_jitter(alpha = 0.2) + 
   geom_boxplot(fill = NA, color = "red") + 
   theme_bw()
