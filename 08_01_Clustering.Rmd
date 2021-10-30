@@ -1,0 +1,25 @@
+# Clustering with *k*-means
+
+## Goals for Today {-} 
+
+* Introduce and talk about unsupervised learning methods
+* Talk about clustering and go over *k*-means clustering approaches/visualizations. 
+
+## Readings for Today {-} 
+
+### Required {-}
+
+* Mishra, [Unsupervised Learning and Data Clustering](https://towardsdatascience.com/unsupervised-learning-and-data-clustering-eeecb78b422a)
+* GeeksForgeeks.org, [K-Means Clustering in R Programming
+](https://www.geeksforgeeks.org/k-means-clustering-in-r-programming/#:~:text=K%20Means%20Clustering%20in%20R,a%20segment%20called%20a%20cluster.)
+* Shraddha Shukla and Naganna S., [A Review On K-means Data Clustering Approach](https://www.ripublication.com/irph/ijict_spl/ijictv4n17spl_15.pdf), *International Journal of Information & Computation Technology*. Volume 4, Number 17 (2014), pp. 1847-1860
+
+### Optional {-}
+
+* [Video - Unsupervised Learning: Crash Course AI](youtube.com/watch?v=JnnaDNNb380) 
+* [Video - K-Means Cluster Analysis in R](https://www.youtube.com/watch?v=KmYUE7Of5rU)
+
+## Important Links and Files {-}
+
+* The file we worked on in class is available [here]()
+

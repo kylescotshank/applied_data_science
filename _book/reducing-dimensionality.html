@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 12 Data Visualization Basics | Applied Data Science I</title>
+  <title>Lesson 16 Reducing dimensionality | Applied Data Science I</title>
   <meta name="description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 12 Data Visualization Basics | Applied Data Science I" />
+  <meta property="og:title" content="Lesson 16 Reducing dimensionality | Applied Data Science I" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://ads-coa.netlify.app/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="kylescotshank/applied_data_science" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 12 Data Visualization Basics | Applied Data Science I" />
+  <meta name="twitter:title" content="Lesson 16 Reducing dimensionality | Applied Data Science I" />
   <meta name="twitter:site" content="@kylescotshank" />
   <meta name="twitter:description" content="This is the syllabus, reading list, and course information for the Applied Data Science I course @ College of the Atlantic." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="data-visualization-theory.html"/>
-<link rel="next" href="data-visualization-for-stats.html"/>
+<link rel="prev" href="clustering-with-k-means.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -351,83 +351,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-visualization-basics" class="section level1">
-<h1><span class="header-section-number">Lesson 12</span> Data Visualization Basics</h1>
-<div id="goals-for-today-11" class="section level2 unnumbered">
+<div id="reducing-dimensionality" class="section level1">
+<h1><span class="header-section-number">Lesson 16</span> Reducing dimensionality</h1>
+<div id="goals-for-today-15" class="section level2 unnumbered">
 <h2>Goals for Today</h2>
 <ul>
-<li>We’re going to build simple graphical visualizations within R</li>
+<li>Introduce and discuss the topic of feature selection/engineering</li>
+<li>Walk through how to perform a principal component analysis (PCA)</li>
 </ul>
 </div>
-<div id="readings-for-today-11" class="section level2 unnumbered">
+<div id="readings-for-today-15" class="section level2 unnumbered">
 <h2>Readings for Today</h2>
-<div id="required-11" class="section level3 unnumbered">
+<div id="required-15" class="section level3 unnumbered">
 <h3>Required</h3>
 <ul>
-<li>Grolemund and Wickham, <a href="https://r4ds.had.co.nz/data-visualisation.html">R for Data Science - Chapter 3, Data Visualizations</a>
-<ul>
-<li>I want you to work and follow along with the code <em>while reading this chapter</em>. It will make much more sense if you do. Pay attention to <em>how the functions</em> generate iterative plot elements (i.e., what does <code>ggplot()</code> do vs. <code>geom_point()</code>).</li>
-</ul></li>
-<li><em>Towards Data Science</em>, <a href="https://towardsdatascience.com/a-comprehensive-guide-to-the-grammar-of-graphics-for-effective-visualization-of-multi-dimensional-1f92b4ed4149">A Comprehensive Guide to the Grammar of Graphics for Effective Visualization of Multi-dimensional Data</a>
-<ul>
-<li>This is good supplemental reading to the above chapters.</li>
-</ul></li>
+<li>GeeksForGeeks.org, <a href="https://www.geeksforgeeks.org/dimensionality-reduction/">Introduction to Dimensionality Reduction</a></li>
+<li>Maria Gulzar, <a href="https://towardsdatascience.com/understanding-dimension-reduction-and-principal-component-analysis-in-r-e3fbd02b29ae">Understanding Dimension Reduction and Principal Component Analysis in R for Data Science</a></li>
+<li><em>R-bloggers</em>, <a href="https://www.r-bloggers.com/2021/05/principal-component-analysis-pca-in-r/">Principal component analysis (PCA) in R</a></li>
 </ul>
 </div>
-<div id="optional-11" class="section level3 unnumbered">
+<div id="optional-15" class="section level3 unnumbered">
 <h3>Optional</h3>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=HPJn1CMvtmI">ggplot for plots and graphs. An introduction to data visualization using R programming</a> (YouTube)</li>
-<li><a href="https://www.youtube.com/watch?v=TgyWeKoK1HA">How to use ggplot2 in R | A Beginner’s RStudio Tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=AU_hBML2H1c">Video - Machine Learning - Dimensionality Reduction - Feature Extraction &amp; Selection</a></li>
+<li><a href="https://www.youtube.com/watch?v=xKl4LJAXnEA">Video - Principal components analysis in R</a></li>
 </ul>
 </div>
 </div>
-<div id="important-links-and-files-11" class="section level2 unnumbered">
+<div id="important-links-and-files-15" class="section level2 unnumbered">
 <h2>Important Links and Files</h2>
 <ul>
-<li>The file we worked on in class is available <a href="https://github.com/kylescotshank/applied_data_science/blob/master/Week6_Class2_InClassExamples.R">here</a></li>
-</ul>
-</div>
-<div id="information-about-the-final-project" class="section level2 unnumbered">
-<h2>Information about the Final Project</h2>
-<p>We’re just now beginning Week 6, so it’s time to start focusing on your final project!</p>
-<div id="the-basics" class="section level3 unnumbered">
-<h3>The Basics</h3>
-<ul>
-<li><strong>Due Date for Written Component</strong>: 2021-11-12</li>
-<li><strong>In-Class Presentations</strong>: 2021-11-16</li>
-<li><strong>Course Grade Weight</strong>: 40%</li>
-</ul>
-</div>
-<div id="guidelines-and-expectations" class="section level3 unnumbered">
-<h3>Guidelines and Expectations</h3>
-<ul>
-<li>The written component is expected to contain the following:
-<ul>
-<li>A description of a dataset and a data-driven examination of its properties.</li>
-<li>Some form of a hypothesis or question you’d like to investigate with the data.</li>
-<li>Statistical tests - both assumptions, outputs, and interpretations - that either confirm or fail to confirm this hypothesis.</li>
-<li>Appropriate visualizations to support your claims or investigations.</li>
-<li>Context and interpretation.</li>
-</ul></li>
-<li>The in-class presentation is expected to be a distilled, simplified version of your written component that focuses much more on cleanly presenting your findings vs. exhaustively defending your arguments/hypotheses.</li>
-<li>There is no hard requirement on length. That said, I want the analysis to be sufficiently complex and thorough. You should expect to have the write-up be between <strong>5-10 pages in length</strong>. The presentation should be somewhere around <strong>10 minutes in length</strong> and contain visualizations you’ll present/share with the class.</li>
-</ul>
-</div>
-<div id="interesting-data-sets" class="section level3 unnumbered">
-<h3>Interesting Data Sets</h3>
-<p>You can choose any data set and question that you like. If you need some ideas, check out these links below. Note: <strong>remember the rules about plagiarism</strong>. Do not pass off others’ work as your own. It’s bad.</p>
-<ul>
-<li><a href="https://www.kaggle.com/datasets">Kaggle Machine Learning Competition Datasets</a></li>
-<li><a href="https://piktochart.com/blog/100-data-sets/">Piktochart</a></li>
-<li><a href="https://github.com/awesomedata/awesome-public-datasets">Awesome Public Datasets</a></li>
-<li><a href="https://data.world/">data.world</a></li>
-<li><a href="https://data.census.gov/cedsci/">US Census Data</a></li>
-<li><a href="https://www.tableau.com/learn/articles/free-public-data-sets">Tableau Public Datasets</a></li>
+<li>The file we worked on in class is available <a href="">here</a></li>
 </ul>
 
 </div>
 </div>
+
+
+
 </div>
 
 
@@ -438,8 +399,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="data-visualization-theory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data-visualization-for-stats.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="clustering-with-k-means.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -470,7 +431,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kylescotshank/applied_data_science06_02_IntroductoryDataViz2.Rmd",
+"link": "https://github.com/kylescotshank/applied_data_science08_02_DimensionReduction.Rmd",
 "text": "Edit"
 },
 "history": {

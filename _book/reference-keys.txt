@@ -12,3 +12,5 @@ data-visualization-theory
 data-visualization-basics
 data-visualization-for-stats
 data-visualization-practice
+clustering-with-k-means
+reducing-dimensionality

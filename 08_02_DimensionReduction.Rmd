@@ -1,0 +1,26 @@
+# Reducing dimensionality
+
+## Goals for Today {-} 
+
+* Introduce and discuss the topic of feature selection/engineering
+* Walk through how to perform a principal component analysis (PCA)
+
+## Readings for Today {-} 
+
+### Required {-}
+
+* GeeksForGeeks.org, [Introduction to Dimensionality Reduction
+](https://www.geeksforgeeks.org/dimensionality-reduction/)
+* Maria Gulzar, [Understanding Dimension Reduction and Principal Component Analysis in R for Data Science
+](https://towardsdatascience.com/understanding-dimension-reduction-and-principal-component-analysis-in-r-e3fbd02b29ae)
+* *R-bloggers*, [Principal component analysis (PCA) in R](https://www.r-bloggers.com/2021/05/principal-component-analysis-pca-in-r/)
+
+### Optional {-}
+
+* [Video - Machine Learning - Dimensionality Reduction - Feature Extraction & Selection](https://www.youtube.com/watch?v=AU_hBML2H1c)
+* [Video - Principal components analysis in R](https://www.youtube.com/watch?v=xKl4LJAXnEA)
+
+## Important Links and Files {-}
+
+* The file we worked on in class is available [here]()
+
