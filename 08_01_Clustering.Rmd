@@ -21,5 +21,5 @@
 
 ## Important Links and Files {-}
 
-* The file we worked on in class is available [here]()
+* The file we worked on in class is available [here](https://github.com/kylescotshank/applied_data_science/blob/master/Week8_Class1_InClassExamples.R)
 
