@@ -16,7 +16,7 @@
 
 ### Optional {-}
 
-* [Video - Unsupervised Learning: Crash Course AI](youtube.com/watch?v=JnnaDNNb380) 
+* [Video - Unsupervised Learning: Crash Course AI]((https://www.youtube.com/watch?v=JnnaDNNb380) 
 * [Video - K-Means Cluster Analysis in R](https://www.youtube.com/watch?v=KmYUE7Of5rU)
 
 ## Important Links and Files {-}
