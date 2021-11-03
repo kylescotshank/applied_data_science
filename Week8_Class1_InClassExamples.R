@@ -195,6 +195,56 @@ ggplot(clusterings, aes(k, tot.withinss)) +
 # Use the iris dataset (use the command data(iris)). Draw a scatterplot showing sepal length on the x-axis and petal length on the y-axis. 
 # Color the dots by species. Then perform a k-means clustering with 3 clusters. Plot your clusters in the same fashion. 
 
+data(iris)
+iris
+
+iris %>% 
+  ggplot(aes(x = Sepal.Length, y = Petal.Length, color = Species)) + 
+  geom_point() + 
+  theme_bw()
+
+iris %>% 
+  select(Sepal.Length, Petal.Length) %>% 
+  kmeans(.,centers = 3) %>%
+  augment(.,iris) %>%
+  ggplot(aes(x = Sepal.Length, y = Petal.Length, color = .cluster)) + 
+  geom_point() + 
+  theme_bw()
+ 
+  
+
 # Use the iris dataset again. Perform a k-means clustering search for all values of k between 1 and 9 when comparing sepal width and petal width. 
 # Create an elbow plot and decide which is the best value of k to choose. 
 
+iris_trimmed <- iris %>% 
+  select(Petal.Width, Sepal.Width)
+
+iris_search <- 
+  tibble(k = 1:9) %>%
+  mutate(
+    kclust = map(k, ~kmeans(iris_trimmed, .x)),
+    tidied = map(kclust, tidy),
+    glanced = map(kclust, glance),
+    augmented = map(kclust, augment, iris_trimmed)
+  )
+
+iris_clusterings <- 
+  iris_search %>%
+  unnest(cols = c(glanced))
+
+iris_clusterings %>%
+  ggplot(aes(k, tot.withinss)) + 
+  geom_line() + 
+  geom_point() + 
+  theme_bw()
+
+iris_assignments <- 
+  iris_search %>% 
+  unnest(cols = c(augmented))
+
+
+iris_assignments %>% 
+  ggplot(aes(x = Petal.Width, y = Sepal.Width)) +
+  geom_point(aes(color = .cluster), alpha = 0.8) + 
+  facet_wrap(~ k) + 
+  theme_bw()
