@@ -40,6 +40,7 @@ We're just now beginning Week 6, so it's time to start focusing on your final pr
   * Some form of a hypothesis or question you'd like to investigate with the data. 
   * Statistical tests - both assumptions, outputs, and interpretations - that either confirm or fail to confirm this hypothesis. 
   * Appropriate visualizations to support your claims or investigations. 
+  * The code that you use generate the items above! 
   * Context and interpretation. 
 * The in-class presentation is expected to be a distilled, simplified version of your written component that focuses much more on cleanly presenting your findings vs. exhaustively defending your arguments/hypotheses. 
 * There is no hard requirement on length. That said, I want the analysis to be sufficiently complex and thorough. You should expect to have the write-up be between **5-10 pages in length**. The presentation should be somewhere around **10 minutes in length** and contain visualizations you'll present/share with the class. 
